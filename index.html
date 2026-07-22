@@ -8,11 +8,10 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
         
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="css/style.css">
         
-
         <title>MealVerse</title>
 
     </head>
@@ -27,7 +26,7 @@
 
 
             <a href="#">
-                <img src="css/images/logomain.png" alt="Mealverse Logo" class="logo">
+                <img src="css/images/logowhite.png" alt="Mealverse Logo" class="logo">
             </a>
             
             <button class="navbar-toggler" type="button"
@@ -66,32 +65,115 @@
 
 
        <!--hero section-->
-
-       <section class="hero-bg position-relative py-5">
-
-        
-        <div class="container-fluid px-md-5">
-            <div>
-                <div class="text-white position-relative z-1">
-                    <h1 class="display-1 fw-black mb-4" style="font-weight: 900; line-height: 1.1;">
+       <section class="hero-bg">
+        <div class="container-fluid">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
                         Discover & <br>
-                        <span class="text-primary"> Master</span> <br>
+                        <span class="text-primary">Master</span> <br>
                         Culinary Arts
                     </h1>
+                    <p class="hero-subtitle">Explore chef-crafted recipes, buy exclusive culinary guides, and build your personal recipe collection. All in one premium kitchen.</p>
+
+
+
+                    <!-- Search bar -->
+                    <div class="search-wrapper">
+                        <select class="form-select search-dropdown">
+                            <option selected>All</option>
+                            <option>Recipes</option>
+                            <option>Chefs</option>
+                            <option>Ingredients</option>
+                        </select>
+                        <input type="text" class="form-control search-input" placeholder="Search recipes, chefs, ingredients...">
+                        <button class="btn btn-primary search-btn"><i class="fas fa-search"></i> Search</button>
+                    </div>
+
+
+
+                    <div class="hero-benefits span">
+                        <span>•    No credit card required    •    1,000+ free recipes    •    Michelin-started chefs</span>
+                    </div>
+
+                </div>
+
+                <div class="featured-card">
+                    <img src="css/images/featured-recipe.jpg" alt="Seafood Linguine" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">ITALIAN</span>
+                        <h5 class="card-title">Seafood Linguine in White Wine Sauce</h5>
+                        <div class="card-footer">
+                            <div>
+                                <small class="text-muted">This Week</small>
+                                <div class="text-primary fw-bold">+2,340 recipes</div>
+                            </div>
+                            <span class="fw-bold">$9.99</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-
-
        </section>
 
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+       <!--Featured Tags under the hero-->
+       <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <img src="css/images/statsimg/chef-hat.png" alt="Chef Hat Icon">
+                </div>
+
+                <div class="stat-content">
+                    <h3>30K+</h3>
+                    <p>Curated Recipes</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <img src="css/images/statsimg/chef-hat.png" alt="Chef Hat Icon">
+                </div>
+
+                <div class="stat-content">
+                    <h3>6.2+</h3>
+                    <p>Expert Chefs</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <img src="css/images/statsimg/recipe-book.png" alt="Recipe Book Icon">
+                </div>
+
+                <div class="stat-content">
+                    <h3>30K+</h3>
+                    <p>Curated Recipes</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <img src="css/images/statsimg/bookmark.png" alt="Bookmark Icon">
+                </div>
+
+                <div class="stat-content">
+                    <h3>30K+</h3>
+                    <p>Curated Recipes</p>
+                </div>
+            </div>
+
+       </div>
+
+
+       <!-- Bootstrap JS library ekak -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 
 </html>
