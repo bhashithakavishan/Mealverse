@@ -394,6 +394,7 @@
       gap: 50px;
       justify-content: center;
       margin-top: 30px;
+      margin-bottom: 30px;
     }
 
     .stat-card{
@@ -425,6 +426,20 @@
       font-size:18px;
 
       flex-shrink:0;
+      overflow: hidden;
+    }
+
+    /* added icons for stats section */
+    .stat-icon img,
+    .stat-icon svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .stat-icon svg {
+      fill: currentColor;
     }
 
     .stat-content h3{
