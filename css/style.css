@@ -144,7 +144,7 @@
 
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f8f9fa;
       color: #212529;
       margin: 0;
@@ -460,5 +460,310 @@
     }
 
     .featured-section{
-      padding:60px 0;
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      color: var(--bs-primary);
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0 0 8px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: 900;
+      color: #111;
+    }
+
+    .view-more {
+      color: var(--bs-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: gap 0.3s ease;
+    }
+
+    .view-more:hover {
+      gap: 12px;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .recipe-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .recipe-image {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .recipe-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .recipe-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: var(--bs-primary);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+
+    /*recipe container special recipe bacgroudn colour*/
+    .recipe-badge.special {
+      background-color: #28a745;
+    }
+
+    .free-badge {
+      position: absolute;
+      top: 12px;
+      right: 50px;
+      background-color: #28a745;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .wishlist-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: white;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #999;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .wishlist-btn:hover {
+      background-color: var(--bs-primary);
+      color: white;
+    }
+
+    .recipe-info {
+      padding: 20px;
+    }
+
+    .recipe-info h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    .recipe-author {
+      margin: 0 0 12px 0;
+      font-size: 13px;
+      color: #777;
+      font-weight: 500;
+    }
+
+    .recipe-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .recipe-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .recipe-meta i {
+      color: var(--bs-primary);
+      font-size: 12px;
+    }
+
+    .recipe-info .btn-primary {
+      width: 100%;
+      font-weight: 600;
+      padding: 8px 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+
+      .section-header h2 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .featured-section {
+        padding: 50px 0;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+      }
+
+      .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .section-header h2 {
+        font-size: 28px;
+      }
+
+      .view-more {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+
+      .recipe-image {
+        height: 160px;
+      }
+
+      .recipe-info {
+        padding: 16px;
+      }
+
+      .recipe-info h3 {
+        font-size: 14px;
+      }
+
+      .recipe-meta {
+        gap: 10px;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+    }
+
+      .popular-section{
+      padding: 80px 0;
+      background-color: white ;
+    }
+
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .category-card {
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 40px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      background: #eef0f4;
+      transform: translateY(-5px);
+    }
+
+    .category-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 16px;
+      object-fit: contain;
+    }
+
+    .category-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .category-card p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--bs-primary);
+    }
+
+
+    .trending-section{
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    @media (max-width: 576px) {
+    .trending-section {
+      padding: 50px 0;
+    }
+    }
+
+    .premium-badge {
+    position: absolute;
+    top: 12px;
+    right: 50px;
+    background-color: #fffb00;
+    color: rgb(12, 12, 12);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    }
+
+    .recipe-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    }
+
+    .recipe-link:hover {
+    text-decoration: none;
+    color: inherit;
     }
