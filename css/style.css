@@ -767,6 +767,7 @@
     text-decoration: none;
     color: inherit;
     }
+<<<<<<< HEAD
     /* Contact Page Custom Styles */
 .contact-hero {
     background: #1A1A1A; /* Contact Hero section එකට dark background එකක් */
@@ -817,4 +818,77 @@
 .custom-input:focus {
     border-color: var(--bs-primary);
     box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25);
+=======
+    /* ================= Contact Page Styles ================= */
+
+.contact-hero {
+  background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85)), url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 140px 20px 60px;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+}
+
+.contact-hero p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info-wrapper {
+  background-color: var(--dark-bg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 107, 53, 0.15);
+  color: var(--bs-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.contact-form-card {
+  border: 1px solid #eee;
+}
+
+.custom-input {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.custom-input:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.15);
+  background-color: #fff;
+>>>>>>> 2d884ccb840b210ecfe02c0d41f366aaf0dea7a2
 }
