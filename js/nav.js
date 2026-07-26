@@ -1,0 +1,43 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const navPlaceholder = document.getElementById('navbar-placeholder');
+
+  if (!navPlaceholder) return;
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  navPlaceholder.innerHTML = `
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="css/images/logowhite.png" alt="Mealverse Logo" class="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-lg-4">
+            <li class="nav-item"><a class="nav-link ${currentPage === 'index.html' ? 'active' : ''}" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link ${currentPage === 'recipes.html' ? 'active' : ''}" href="recipes.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Marketplace</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Chefs</a></li>
+            <li class="nav-item"><a class="nav-link ${currentPage === 'contact.html' ? 'active' : ''}" href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="nav-buttons mobile-nav-actions">
+            <a class="text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            <a href="#">Sign In</a>
+            <a class="btn btn-primary rounded-pill px-4 py-2" href="#">Get Started</a>
+          </div>
+        </div>
+
+        <div class="nav-buttons desktop-nav-actions">
+          <a class="text-white" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="#">Sign In</a>
+          <a class="btn btn-primary rounded-pill px-4 py-2" href="#">Get Started</a>
+        </div>
+      </div>
+    </nav>
+  `;
+});
