@@ -76,7 +76,7 @@
 
             <!-- Sorting Bar -->
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <p class="text-muted mb-0 fw-500" id="recipe-count-text">Showing 28 recipes</p>
+                <p class="text-muted mb-0 fw-500" id="recipe-count-text">Showing 24 recipes</p>
                 <div class="dropdown">
                     <button class="btn btn-light rounded-pill shadow-sm px-3 dropdown-toggle text-muted fw-bold border" type="button" data-bs-toggle="dropdown">
                         Sort By : Latest
@@ -110,7 +110,7 @@
 
                 <div class="recipe-card" data-category="main-course">
                     <div class="recipe-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3oHEKKKfFggQnQklYzWGGJU4Q6KjurJqR4eEnZyyu9A&s=10" alt="Spaghetti Carbonara">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLCks-I7JKC70HeYWkt-JznYIAg6b8sLG7EKMDbGZDqg&s" alt="Spaghetti Carbonara">
                         <span class="recipe-badge" style="background-color: #ff9800;">Italian</span>
                         <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                     </div>
@@ -122,8 +122,7 @@
                             <span><i class="fas fa-fire"></i> 550 cal</span>
                             <span><i class="fas fa-star"></i> 4.8 (950)</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-success fw-bold">Free</span>
+                        <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
@@ -184,8 +183,7 @@
                             <span><i class="fas fa-fire"></i> 180 cal</span>
                             <span><i class="fas fa-star"></i> 4.8 (450)</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-success fw-bold">Free</span>
+                        <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
@@ -245,8 +243,7 @@
                             <span><i class="fas fa-fire"></i> 320 cal</span>
                             <span><i class="fas fa-star"></i> 4.6 (590)</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-success fw-bold">Free</span>
+                        <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
@@ -287,8 +284,7 @@
                             <span><i class="fas fa-fire"></i> 420 cal</span>
                             <span><i class="fas fa-star"></i> 4.8 (1100)</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-success fw-bold">Free</span>
+                        <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
@@ -349,8 +345,7 @@
                             <span><i class="fas fa-fire"></i> 210 cal</span>
                             <span><i class="fas fa-star"></i> 4.8 (890)</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-success fw-bold">Free</span>
+                        <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
@@ -431,8 +426,7 @@
                             <span><i class="fas fa-fire"></i> 350 cal</span>
                             <span><i class="fas fa-star"></i> 4.7 (1300)</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-success fw-bold">Free</span>
+                        <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
@@ -533,8 +527,7 @@
                             <span><i class="fas fa-fire"></i> 120 cal</span>
                             <span><i class="fas fa-star"></i> 4.9 (1500)</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-success fw-bold">Free</span>
+                        <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
@@ -730,13 +723,11 @@
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Remove active classes
                     filterBtns.forEach(b => {
                         b.classList.remove('btn-primary', 'active');
                         b.classList.add('btn-light', 'text-muted');
                     });
                     
-                    // Add active class to clicked button
                     btn.classList.remove('btn-light', 'text-muted');
                     btn.classList.add('btn-primary', 'active');
 
@@ -752,7 +743,6 @@
                         }
                     });
 
-                    // Update count text dynamically
                     if (countText) {
                         countText.textContent = `Showing ${visibleCount} recipes`;
                     }
