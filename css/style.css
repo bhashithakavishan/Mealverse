@@ -1108,3 +1108,117 @@
     color:#888;
     font-size:12px;
 }
+/* ================= Recipes Page Specific Styles ================= */
+
+/* Recipes Hero Section */
+.recipes-hero {
+    background: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 60px 0;
+    margin-top: 0;
+}
+
+.add-recipe-btn {
+    background-color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.add-recipe-btn:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/* 4-Column Grid for Recipes Page */
+.recipe-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* 2-Column Grid for bottom cards */
+.recipe-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Pagination Styles */
+.pagination-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: white;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.page-btn.btn-primary {
+    background-color: var(--bs-primary);
+    color: white;
+    border: none;
+}
+
+.page-btn:hover:not(.btn-primary) {
+    background-color: #f8f9fa;
+    color: var(--bs-primary) !important;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, #FF8C5A 0%, #FF6B35 100%);
+}
+
+.newsletter-form .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments for 4-column grid */
+@media (max-width: 1200px) {
+    .recipe-grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .recipe-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .recipe-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .recipe-grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .search-action-bar {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+    .add-recipe-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .newsletter-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .newsletter-form .btn {
+        width: 100%;
+    }
+}
