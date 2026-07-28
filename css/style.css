@@ -1108,7 +1108,8 @@
     color:#888;
     font-size:12px;
 }
-/* ================= Recipes Page Specific Styles ================= */
+
+
 
 /* Recipes Hero Section */
 .recipes-hero {
@@ -1131,14 +1132,13 @@
     transform: translateY(-2px);
 }
 
-/* 4-Column Grid for Recipes Page */
 .recipe-grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
-/* 2-Column Grid for bottom cards */
+
 .recipe-grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1147,7 +1147,7 @@
     margin: 0 auto;
 }
 
-/* Pagination Styles */
+
 .pagination-wrapper {
     display: flex;
     gap: 10px;
@@ -1177,14 +1177,7 @@
     color: var(--bs-primary) !important;
 }
 
-/* Newsletter Section */
-.newsletter-section {
-    background: linear-gradient(135deg, #FF8C5A 0%, #FF6B35 100%);
-}
 
-.newsletter-form .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
-}
 
 /* Responsive adjustments for 4-column grid */
 @media (max-width: 1200px) {
@@ -1253,73 +1246,9 @@ body {
     border-color: #e55a2b;
 }
 
-/* ==========================================================================
-   NAVIGATION BAR
-   ========================================================================== */
-.navbar {
-    position: absolute;
-    background: transparent;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 0;
-    z-index: 1000;
-}
 
-.navbar .container {
-    align-items: center;
-    gap: 1rem;
-}
+/*chefs hero section*/
 
-.logo {
-    width: 150px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.navbar-brand { color: #fff; }
-
-.navbar-toggler {
-    border: 0;
-    padding: 0.35rem;
-    margin-left: auto;
-}
-
-.navbar-toggler:focus { box-shadow: none; }
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    width: 1.4rem;
-    height: 1.4rem;
-}
-
-.navbar-collapse { justify-content: center; }
-.navbar-nav { gap: 0.5rem 1.5rem; }
-
-.nav-buttons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-left: auto;
-}
-
-.nav-buttons a {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-link {
-    color: white !important;
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    color: var(--bs-primary) !important;
-}
-
-/* ==========================================================================
-   CHEFS HERO SECTION & SEARCH BAR
-   ========================================================================== */
 .chefs-hero {
     background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85)), url('images/background.jpg');
     background-size: cover;
@@ -1356,9 +1285,8 @@ body {
     border-bottom-left-radius: 10px;
 }
 
-/* ==========================================================================
-   FEATURED CHEFS SECTION & CARDS
-   ========================================================================== */
+/*fearured chefs section*/
+
 .featured-chefs {
     padding: 80px 0;
     background-color: #f8f9fa;
@@ -1499,9 +1427,6 @@ body {
     font-weight: 600;
 }
 
-/* ==========================================================================
-   BECOME A CHEF CTA SECTION
-   ========================================================================== */
 .become-chef-section {
     background-color: #f8f9fa;
 }
@@ -1523,25 +1448,3 @@ body {
     border-radius: 50%;
 }
 
-/* ==========================================================================
-   RESPONSIVE STYLES
-   ========================================================================== */
-@media (max-width: 992px) {
-    .chefs-hero {
-        padding: 130px 20px 60px;
-    }
-    
-    .chefs-hero h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .chef-search-wrapper {
-        padding: 20px;
-    }
-    
-    .chef-stats strong {
-        font-size: 18px;
-    }
-}

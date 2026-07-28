@@ -7,40 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>MealVerse - Recipes</title>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-dark" style="position: relative; background: #111 !important; padding: 15px 0;">        
-        <div class="container">
-            <a href="index.html">
-                <img src="css/images/logowhite.png" alt="Mealverse Logo" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav gap-lg-4">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active text-primary" href="recipes.html">Recipes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Marketplace</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Chefs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-                <div class="nav-buttons mobile-nav-actions">
-                    <a class="text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-                    <a href="#">Sign In</a>
-                    <a class="btn btn-primary rounded-pill px-4 py-2" href="#">Get Started</a>
-                </div>
-            </div>
-            <div class="nav-buttons desktop-nav-actions">
-                <a class="text-white" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#">Sign In</a>
-                <a class="btn btn-primary rounded-pill px-4 py-2" href="#">Get Started</a>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <!-- Recipes Hero Section -->
     <section class="recipes-hero">
@@ -84,10 +57,11 @@
                 </div>
             </div>
 
-            <!-- 4 Column Recipe Grid -->
+            <!--Recipe Grid -->
             <div class="recipe-grid-4">
 
-                <!-- ================= MAIN COURSE (4 Recipes) ================= -->
+
+
                 <div class="recipe-card" data-category="main-course">
                     <div class="recipe-image">
                         <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80" alt="Classic Ribeye Steak">
@@ -168,7 +142,8 @@
                     </div>
                 </div>
 
-                <!-- ================= APPETIZERS (4 Recipes) ================= -->
+
+
                 <div class="recipe-card" data-category="appetizers">
                     <div class="recipe-image">
                         <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80" alt="Tomato Bruschetta">
@@ -249,7 +224,9 @@
                     </div>
                 </div>
 
-                <!-- ================= DESSERTS (4 Recipes) ================= -->
+
+
+
                 <div class="recipe-card" data-category="desserts">
                     <div class="recipe-image">
                         <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" alt="Cheesecake">
@@ -330,7 +307,8 @@
                     </div>
                 </div>
 
-                <!-- ================= SOUPS (4 Recipes) ================= -->
+
+
                 <div class="recipe-card" data-category="soups">
                     <div class="recipe-image">
                         <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="Tomato Soup">
@@ -492,7 +470,8 @@
                     </div>
                 </div>
 
-                <!-- ================= BEVERAGES (4 Recipes) ================= -->
+
+
                 <div class="recipe-card" data-category="beverages">
                     <div class="recipe-image">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQie-k8clAJAOK01wQE8IDssfg37yTYINQcYJsCWI4Kig&s=10" alt="Iced Coffee">
@@ -681,40 +660,17 @@
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section py-5 mt-5">
-        <div class="container text-center">
-            <div class="newsletter-icon mb-3">
-                <i class="far fa-envelope text-white fa-3x opacity-75"></i>
-            </div>
-            <h2 class="text-white fw-bold mb-3">Get Weekly Recipe Inspiration</h2>
-            <p class="text-white opacity-75 mb-4">Join 20 thousand food lovers. Get curated recipes, chef tips, and<br>exclusive deals delivered to your inbox every Thursday.</p>
-            <div class="newsletter-form d-flex justify-content-center mx-auto" style="max-width: 500px;">
-                <input type="email" class="form-control rounded-pill px-4 me-2 border-0" placeholder="Enter your email address">
-                <button class="btn btn-dark rounded-pill px-4 fw-bold">Subscribe</button>
-            </div>
-            <p class="text-white opacity-50 mt-3" style="font-size: 12px;">No spam. Unsubscribe anytime. 100% free</p>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-center py-4 mt-auto">
-        <div class="container d-flex flex-column align-items-center">
-            <img src="css/images/logowhite.png" alt="Mealverse Logo" class="logo mb-3" style="width: 120px;">
-            <div class="footer-links mb-3">
-                <a href="#" class="text-white text-decoration-none mx-2">Home</a>
-                <a href="#" class="text-white text-decoration-none mx-2">Recipes</a>
-                <a href="#" class="text-white text-decoration-none mx-2">Marketplace</a>
-                <a href="#" class="text-white text-decoration-none mx-2">Chefs</a>
-                <a href="#" class="text-white text-decoration-none mx-2">Contact</a>
-            </div>
-            <p class="text-muted mb-0" style="font-size: 12px;">&copy; 2026 MealVerse. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Footer Section -->
+    <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+
     
-    <!-- Category Filtering JavaScript -->
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const filterBtns = document.querySelectorAll('.filter-btn');
@@ -750,5 +706,6 @@
             });
         });
     </script>
+    
 </body>
 </html>

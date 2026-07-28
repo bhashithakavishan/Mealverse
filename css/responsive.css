@@ -528,3 +528,27 @@
     }
 
 }
+
+
+
+/*chefs page*/
+
+@media (max-width: 992px) {
+    .chefs-hero {
+        padding: 130px 20px 60px;
+    }
+    
+    .chefs-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .chef-search-wrapper {
+        padding: 20px;
+    }
+    
+    .chef-stats strong {
+        font-size: 18px;
+    }
+}
