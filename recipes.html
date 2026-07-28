@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>MealVerse - Recipes</title>
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <!-- hero -->
+    <section class="recipes-hero">
+        <div class="container">
+            <h1 class="hero-title text-white">Recipes</h1>
+            <p class="hero-subtitle text-white">Explore delicious recipes from around the world.<br>Find your next favorite dish and start cooking!</p>
+            
+            <div class="search-action-bar d-flex flex-wrap gap-3 align-items-center mt-4">
+                <div class="search-wrapper mb-0 flex-grow-1" style="max-width: 600px;">
+                    <input type="text" class="form-control search-input px-4" placeholder="Search recipes, ingredients...">
+                    <button class="btn btn-primary search-btn rounded-pill px-4">Search <i class="fas fa-search ms-2"></i></button>
+                </div>
+                <a href="addrecipe.html" class="btn btn-light add-recipe-btn rounded-pill px-4 py-2 fw-bold d-flex align-items-center gap-2">
+                    <i class="fas fa-plus text-dark"></i> Add New Recipe
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- recipes -->
+    <section class="filters-section py-4">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 filter-pills">
+                <button class="btn btn-primary rounded-pill px-4 shadow-sm filter-btn active" data-filter="all">All</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="main-course">Main Course</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="appetizers">Appetizers</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="desserts">Desserts</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="soups">Soups</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="salads">Salads</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="beverages">Beverages</button>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <p class="text-muted mb-0 fw-500" id="recipe-count-text">Showing 24 recipes</p>
+                <div class="dropdown">
+                    <button class="btn btn-light rounded-pill shadow-sm px-3 dropdown-toggle text-muted fw-bold border" type="button" data-bs-toggle="dropdown">
+                        Sort By : Latest
+                    </button>
+                </div>
+            </div>
+
+            <div class="recipe-grid-4">
+
+
+
+                <div class="recipe-card" data-category="main-course">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80" alt="Classic Ribeye Steak">
+                        <span class="recipe-badge" style="background-color: #f44336;">American</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Classic Pan-Seared Ribeye Steak</h3>
+                        <p class="recipe-author">by Gordon Ramsay</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 25 min</span>
+                            <span><i class="fas fa-fire"></i> 750 cal</span>
+                            <span><i class="fas fa-star"></i> 4.9 (1500)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="main-course">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLCks-I7JKC70HeYWkt-JznYIAg6b8sLG7EKMDbGZDqg&s" alt="Spaghetti Carbonara">
+                        <span class="recipe-badge" style="background-color: #ff9800;">Italian</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Authentic Spaghetti Carbonara</h3>
+                        <p class="recipe-author">by Marco Pierre</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 20 min</span>
+                            <span><i class="fas fa-fire"></i> 550 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (950)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="main-course">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80" alt="Chicken Rice and Curry">
+                        <span class="recipe-badge special">Sri Lankan</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Traditional Chicken Rice & Curry</h3>
+                        <p class="recipe-author">by Nimali Perera</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 45 min</span>
+                            <span><i class="fas fa-fire"></i> 600 cal</span>
+                            <span><i class="fas fa-star"></i> 4.9 (2100)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="main-course">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=600&q=80" alt="Grilled Salmon">
+                        <span class="recipe-badge" style="background-color: #009688;">Seafood</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Garlic Butter Grilled Salmon</h3>
+                        <p class="recipe-author">by Jamie Oliver</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                            <span><i class="fas fa-fire"></i> 450 cal</span>
+                            <span><i class="fas fa-star"></i> 4.7 (830)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="recipe-card" data-category="appetizers">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80" alt="Tomato Bruschetta">
+                        <span class="recipe-badge" style="background-color: #d32f2f;">Italian</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Classic Tomato Bruschetta</h3>
+                        <p class="recipe-author">by Elena Romano</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 15 min</span>
+                            <span><i class="fas fa-fire"></i> 180 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (450)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="appetizers">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkBQCmcpqcIg40M_jS1urnIOpEG5bdhVhvGdZuJk2Q7Q&s=10" alt="Spring Rolls">
+                        <span class="recipe-badge" style="background-color: #4caf50;">Asian</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Crispy Vegetable Spring Rolls</h3>
+                        <p class="recipe-author">by Chen Wei</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                            <span><i class="fas fa-fire"></i> 220 cal</span>
+                            <span><i class="fas fa-star"></i> 4.7 (380)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="appetizers">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Buffalo Wings">
+                        <span class="recipe-badge" style="background-color: #f57c00;">American</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Spicy Buffalo Chicken Wings</h3>
+                        <p class="recipe-author">by Mike Johnson</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 40 min</span>
+                            <span><i class="fas fa-fire"></i> 450 cal</span>
+                            <span><i class="fas fa-star"></i> 4.9 (1200)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="appetizers">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvrb_2dHI1oxO-UUKUO4QofcYk7h7qClbUylj9ci5Kg&s=10" alt="Garlic Bread">
+                        <span class="recipe-badge" style="background-color: #ffb300;">Bakery</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Cheesy Garlic Breadsticks</h3>
+                        <p class="recipe-author">by Anna Smith</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 20 min</span>
+                            <span><i class="fas fa-fire"></i> 320 cal</span>
+                            <span><i class="fas fa-star"></i> 4.6 (590)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="recipe-card" data-category="desserts">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" alt="Cheesecake">
+                        <span class="recipe-badge" style="background-color: #9c27b0;">Dessert</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>New York Style Cheesecake</h3>
+                        <p class="recipe-author">by Sarah Jenkins</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 75 min</span>
+                            <span><i class="fas fa-fire"></i> 550 cal</span>
+                            <span><i class="fas fa-star"></i> 4.9 (2400)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="desserts">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Brownie">
+                        <span class="recipe-badge" style="background-color: #795548;">Dessert</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Fudge Chocolate Brownies</h3>
+                        <p class="recipe-author">by David Clark</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 45 min</span>
+                            <span><i class="fas fa-fire"></i> 420 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (1100)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="desserts">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=80" alt="Tiramisu">
+                        <span class="recipe-badge" style="background-color: #ff9800;">Italian</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Classic Italian Tiramisu</h3>
+                        <p class="recipe-author">by Mario Rossi</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                            <span><i class="fas fa-fire"></i> 480 cal</span>
+                            <span><i class="fas fa-star"></i> 5.0 (980)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="desserts">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=600&q=80" alt="Macarons">
+                        <span class="recipe-badge" style="background-color: #e91e63;">French</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Assorted French Macarons</h3>
+                        <p class="recipe-author">by Chef Antoine</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 90 min</span>
+                            <span><i class="fas fa-fire"></i> 150 cal</span>
+                            <span><i class="fas fa-star"></i> 4.7 (650)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="recipe-card" data-category="soups">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="Tomato Soup">
+                        <span class="recipe-badge" style="background-color: #f44336;">European</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Roasted Tomato Basil Soup</h3>
+                        <p class="recipe-author">by Kelly Adams</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 45 min</span>
+                            <span><i class="fas fa-fire"></i> 210 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (890)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="soups">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=600&q=80" alt="Pumpkin Soup">
+                        <span class="recipe-badge" style="background-color: #ff9800;">Healthy</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Creamy Butternut Squash Soup</h3>
+                        <p class="recipe-author">by Emma White</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 40 min</span>
+                            <span><i class="fas fa-fire"></i> 250 cal</span>
+                            <span><i class="fas fa-star"></i> 4.9 (1120)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="soups">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="French Onion Soup">
+                        <span class="recipe-badge" style="background-color: #1976d2;">French</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Classic French Onion Soup</h3>
+                        <p class="recipe-author">by Chef Antoine</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 60 min</span>
+                            <span><i class="fas fa-fire"></i> 340 cal</span>
+                            <span><i class="fas fa-star"></i> 4.7 (750)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="soups">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwSJ8LF_TP3eOxYbkGskPo9KRd--a0WBv6JhJrq7bvaQ&s=10" alt="Tom Yum Soup">
+                        <span class="recipe-badge" style="background-color: #8bc34a;">Thai</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Spicy Shrimp Tom Yum Soup</h3>
+                        <p class="recipe-author">by Ploy Suksabai</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 25 min</span>
+                            <span><i class="fas fa-fire"></i> 280 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (920)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="salads">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=600&q=80" alt="Caesar Salad">
+                        <span class="recipe-badge" style="background-color: #4caf50;">Healthy</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Chicken Caesar Salad</h3>
+                        <p class="recipe-author">by Laura Wilson</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 15 min</span>
+                            <span><i class="fas fa-fire"></i> 350 cal</span>
+                            <span><i class="fas fa-star"></i> 4.7 (1300)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="salads">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80" alt="Greek Salad">
+                        <span class="recipe-badge" style="background-color: #03a9f4;">Mediterranean</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Fresh Greek Feta Salad</h3>
+                        <p class="recipe-author">by Alex Costa</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 10 min</span>
+                            <span><i class="fas fa-fire"></i> 220 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (850)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="salads">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Quinoa Salad">
+                        <span class="recipe-badge" style="background-color: #8bc34a;">Vegan</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Avocado & Quinoa Super Salad</h3>
+                        <p class="recipe-author">by Maya Patel</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 20 min</span>
+                            <span><i class="fas fa-fire"></i> 310 cal</span>
+                            <span><i class="fas fa-star"></i> 4.9 (1100)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="salads">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShY_Yj4G41vSZto54dGL5Ur-qsl5KVuZMCLyv2ZyBMGw&s=10" alt="Cobb Salad">
+                        <span class="recipe-badge" style="background-color: #ff5722;">American</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Classic Cobb Salad</h3>
+                        <p class="recipe-author">by John Smith</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 25 min</span>
+                            <span><i class="fas fa-fire"></i> 480 cal</span>
+                            <span><i class="fas fa-star"></i> 4.6 (670)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="recipe-card" data-category="beverages">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQie-k8clAJAOK01wQE8IDssfg37yTYINQcYJsCWI4Kig&s=10" alt="Iced Coffee">
+                        <span class="recipe-badge" style="background-color: #795548;">Coffee</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Caramel Iced Macchiato</h3>
+                        <p class="recipe-author">by Tom Harris</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                            <span><i class="fas fa-fire"></i> 180 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (2100)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="beverages">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80" alt="Mojito">
+                        <span class="recipe-badge" style="background-color: #4caf50;">Mocktail</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Refreshing Mint Mojito</h3>
+                        <p class="recipe-author">by Maria Garcia</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 10 min</span>
+                            <span><i class="fas fa-fire"></i> 120 cal</span>
+                            <span><i class="fas fa-star"></i> 4.9 (1500)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="beverages">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ZaYmzNNch2-bm0edLzo7Xpz0cQQUjulRB5mag6wU0g&s=10" alt="Mango Lassi">
+                        <span class="recipe-badge" style="background-color: #ff9800;">Indian</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Sweet Mango Lassi</h3>
+                        <p class="recipe-author">by Rahul Sharma</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 10 min</span>
+                            <span><i class="fas fa-fire"></i> 250 cal</span>
+                            <span><i class="fas fa-star"></i> 4.7 (950)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-category="beverages">
+                    <div class="recipe-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Zqb5HN2DWgB7Lu9CFo5i0UBy-Uw3FlEsezkbrxfy7Q&s=10" alt="Smoothie">
+                        <span class="recipe-badge" style="background-color: #e91e63;">Healthy</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Strawberry Banana Smoothie</h3>
+                        <p class="recipe-author">by Kelly Adams</p>
+                        <div class="recipe-meta mb-3">
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                            <span><i class="fas fa-fire"></i> 190 cal</span>
+                            <span><i class="fas fa-star"></i> 4.8 (880)</span>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-center mt-5 mb-5">
+                <div class="pagination-wrapper">
+                    <button class="btn btn-primary page-btn shadow-sm">1</button>
+                </div>
+            </div>
+
+            <div class="recipe-grid-2 mt-5 pt-5 border-top">
+                
+                <div class="recipe-card">
+                    <div class="recipe-image" style="height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=600&q=80" alt="Spicy Tonkotsu Ramen">
+                        <span class="recipe-badge" style="background-color: #d32f2f;">Japanese</span>
+                        <span class="premium-badge" style="right: 12px; top: 12px;">PREMIUM</span>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="d-flex align-items-center mb-2">
+                           <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=50&q=80" alt="avatar" class="rounded-circle me-2" style="width:24px; height:24px; object-fit:cover;">
+                           <p class="recipe-author mb-0">by Chef Kenji Sato</p>
+                           <span class="ms-auto text-warning"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <h3>Authentic Spicy Tonkotsu Ramen</h3>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div class="recipe-meta mb-0">
+                                <span><i class="fas fa-clock"></i> 120 min</span>
+                                <span><i class="fas fa-fire"></i> 720 cal</span>
+                            </div>
+                            <span class="text-success fw-bold text-end" style="font-size: 12px;">5,210 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image" style="height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken">
+                        <span class="recipe-badge" style="background-color: #f57c00;">Indian</span>
+                        <span class="premium-badge" style="right: 12px; top: 12px;">PREMIUM</span>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="d-flex align-items-center mb-2">
+                           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=50&q=80" alt="avatar" class="rounded-circle me-2" style="width:24px; height:24px; object-fit:cover;">
+                           <p class="recipe-author mb-0">by Rahul Sharma</p>
+                           <span class="ms-auto text-warning"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <h3>Classic Butter Chicken (Murgh Makhani)</h3>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div class="recipe-meta mb-0">
+                                <span><i class="fas fa-clock"></i> 45 min</span>
+                                <span><i class="fas fa-fire"></i> 650 cal</span>
+                            </div>
+                            <span class="text-success fw-bold text-end" style="font-size: 12px;">4,832 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image" style="height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=600&q=80" alt="Beef Lasagna">
+                        <span class="recipe-badge" style="background-color: #2e7d32;">Italian</span>
+                        <span class="premium-badge" style="right: 12px; top: 12px;">PREMIUM</span>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="d-flex align-items-center mb-2">
+                           <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=50&q=80" alt="avatar" class="rounded-circle me-2" style="width:24px; height:24px; object-fit:cover;">
+                           <p class="recipe-author mb-0">by Elena Romano</p>
+                           <span class="ms-auto text-warning"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <h3>Traditional Homemade Beef Lasagna</h3>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div class="recipe-meta mb-0">
+                                <span><i class="fas fa-clock"></i> 90 min</span>
+                                <span><i class="fas fa-fire"></i> 850 cal</span>
+                            </div>
+                            <span class="text-success fw-bold text-end" style="font-size: 12px;">2,945 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image" style="height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Beef Bourguignon">
+                        <span class="recipe-badge" style="background-color: #1976d2;">French</span>
+                        <span class="premium-badge" style="right: 12px; top: 12px;">PREMIUM</span>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="d-flex align-items-center mb-2">
+                           <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=50&q=80" alt="avatar" class="rounded-circle me-2" style="width:24px; height:24px; object-fit:cover;">
+                           <p class="recipe-author mb-0">by Chef Antoine</p>
+                           <span class="ms-auto text-warning"><i class="fas fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Slow-Cooked Beef Bourguignon</h3>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div class="recipe-meta mb-0">
+                                <span><i class="fas fa-clock"></i> 180 min</span>
+                                <span><i class="fas fa-fire"></i> 680 cal</span>
+                            </div>
+                            <span class="text-success fw-bold text-end" style="font-size: 12px;">6,102 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+
+    
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const recipeCards = document.querySelectorAll('.recipe-grid-4 .recipe-card');
+            const countText = document.getElementById('recipe-count-text');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('btn-primary', 'active');
+                        b.classList.add('btn-light', 'text-muted');
+                    });
+                    
+                    btn.classList.remove('btn-light', 'text-muted');
+                    btn.classList.add('btn-primary', 'active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+                    let visibleCount = 0;
+
+                    recipeCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            visibleCount++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    if (countText) {
+                        countText.textContent = `Showing ${visibleCount} recipes`;
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

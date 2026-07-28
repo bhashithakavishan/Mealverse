@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        
+        <title>MealVerse</title>
+
+    </head>
+
+    <body class="page-add-recipe">
+        <!--navigation bar-->
+        <div id="navbar-placeholder"></div>
+
+        <!-- Hero Section-->
+        <header class="contact-hero text-center text-white">
+            <div class="container">
+                <p class="section-label mb-2">Share Your Creations</p>
+                <h1 class="fw-bold mb-3">Add New <span class="text-primary">Recipe</span></h1>
+                <p class="mb-0">Turn your favorite dish into inspiration for a global food community.</p>
+            </div>
+        </header>
+
+            <!-- Main Form -->
+        <div class="container py-5 add-recipe-shell">
+            <div class="recipe-form-card p-4 p-md-5">
+                <form id="recipeForm">
+
+                    <section class="mb-5">
+                        <div class="section-header pb-3 border-bottom mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="section-number">01</div>
+                                <h2>Basic Information</h2>
+                            </div>
+                            <span class="text-muted small d-none d-sm-block">Tell us about your recipe</span>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="input-icon-group">
+                                    <span class="material-symbols-outlined input-icon">restaurant_menu</span>
+                                    <input class="form-control custom-input icon-padded" placeholder="Recipe Title" type="text"/>
+                                </div>
+                            </div>
+                            <div class="col-12 position-relative">
+                                <textarea class="form-control custom-input" placeholder="Short Description" rows="4"></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold small text-muted text-uppercase mb-2">Cuisine</label>
+                                <select class="form-select custom-input">
+                                    <option selected>Select cuisine</option>
+                                    <option>Italian</option>
+                                    <option>Mexican</option>
+                                    <option>Asian</option>
+                                    <option>French</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold small text-muted text-uppercase mb-2">Category</label>
+                                <select class="form-select custom-input">
+                                    <option selected>Select category</option>
+                                    <option>Main Course</option>
+                                    <option>Dessert</option>
+                                    <option>Appetizer</option>
+                                    <option>Breakfast</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold small text-muted text-uppercase mb-2">Servings</label>
+                                <div class="input-icon-group">
+                                    <span class="material-symbols-outlined input-icon">groups</span>
+                                    <select class="form-select custom-input icon-padded">
+                                        <option selected>Servings</option>
+                                        <option>1-2 Persons</option>
+                                        <option>3-4 Persons</option>
+                                        <option>5+ Persons</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="mb-5">
+                        <div class="section-header pb-3 border-bottom mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="section-number">02</div>
+                                <h2>Recipe Image</h2>
+                            </div>
+                            <span class="text-muted small d-none d-sm-block">Add a mouthwatering photo</span>
+                        </div>
+                        <div class="upload-zone text-center p-5">
+                            <div class="stat-icon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 28px;">
+                                <span class="material-symbols-outlined">cloud_upload</span>
+                            </div>
+                            <h5 class="fw-bold mb-2">Upload Recipe Image</h5>
+                            <p class="text-muted mb-1">Drag and drop an image here, or click to browse</p>
+                            <p class="text-muted mb-0 small opacity-75">JPG, PNG up to 5MB</p>
+                        </div>
+                    </section>
+
+
+                    <section class="mb-5">
+                        <div class="section-header pb-3 border-bottom mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="section-number">03</div>
+                                <h2>Ingredients</h2>
+                            </div>
+                            <span class="text-muted small d-none d-sm-block">List what's needed</span>
+                        </div>
+                        <div class="row g-3 mb-3 align-items-center">
+                            <div class="col-md-8">
+                                <div class="input-icon-group">
+                                    <span class="material-symbols-outlined input-icon">flatware</span>
+                                    <input class="form-control custom-input icon-padded" placeholder="Ingredient name" type="text"/>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-icon-group">
+                                    <span class="material-symbols-outlined input-icon">scale</span>
+                                    <input class="form-control custom-input icon-padded" placeholder="Quantity" type="text"/>
+                                </div>
+                            </div>
+                            <div class="col-md-1 text-end">
+                                <button class="btn text-danger p-2" type="button">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary d-inline-flex align-items-center gap-2" type="button">
+                            <span class="material-symbols-outlined fs-6">add</span> Add Ingredient
+                        </button>
+                    </section>
+
+
+                    <section class="mb-5">
+                        <div class="section-header pb-3 border-bottom mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="section-number">04</div>
+                                <h2>Instructions</h2>
+                            </div>
+                            <span class="text-muted small d-none d-sm-block">Share the cooking steps</span>
+                        </div>
+                        <div class="instruction-step p-4 mb-3">
+                            <div class="row g-3">
+                                <div class="col-auto">
+                                    <div class="step-badge">1</div>
+                                </div>
+                                <div class="col">
+                                    <div class="position-relative">
+                                        <textarea class="form-control custom-input pe-5" placeholder="Describe this step..." rows="3"></textarea>
+                                        <button class="btn position-absolute bottom-0 end-0 mb-2 me-2 text-muted" type="button">
+                                            <span class="material-symbols-outlined">image</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn text-muted p-2" type="button">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary d-inline-flex align-items-center gap-2 mt-2" type="button">
+                            <span class="material-symbols-outlined fs-6">add</span> Add Another Step
+                        </button>
+                    </section>
+
+
+                    <div class="row justify-content-center pt-4 g-3 add-recipe-actions">
+                        <div class="col-md-4 col-lg-3">
+                            <button class="btn btn-light w-100 py-3 fw-bold border d-flex align-items-center justify-content-center gap-2" style="border-radius: 10px;" type="button">
+                                <span class="material-symbols-outlined">save</span> Save Draft
+                            </button>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <button class="btn btn-primary w-100 py-3 d-flex align-items-center justify-content-center gap-2" type="submit">
+                                <span class="material-symbols-outlined">rocket_launch</span> Publish Recipe
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Footer Section -->
+        <div id="footer-placeholder"></div>
+            
+        <!-- Bootstrap JS library-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/footer.js"></script>
+    </body>
+
+</html>
