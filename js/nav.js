@@ -21,20 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <li class="nav-item"><a class="nav-link ${currentPage === 'index.html' ? 'active' : ''}" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link ${currentPage === 'recipes.html' ? 'active' : ''}" href="recipes.html">Recipes</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Marketplace</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Chefs</a></li>
+            <li class="nav-item"><a class="nav-link ${currentPage === 'chefs.html' ? 'active' : ''}" href="chefs.html">Chefs</a></li>
             <li class="nav-item"><a class="nav-link ${currentPage === 'contact.html' ? 'active' : ''}" href="contact.html">Contact</a></li>
           </ul>
-
-          <div class="nav-buttons mobile-nav-actions">
-            <a class="text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-            <a href="#">Sign In</a>
-            <a class="btn btn-primary rounded-pill px-4 py-2" href="#">Get Started</a>
-          </div>
         </div>
 
-        <div class="nav-buttons desktop-nav-actions">
-          <a class="text-white" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          <a href="#">Sign In</a>
+        <!-- Buttons 1 පාරක් පමණක් එකතු කර ඇත -->
+        <div class="nav-buttons d-none d-lg-flex align-items-center gap-3">
+          <a class="text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+          <a class="text-white" href="#">Sign In</a>
           <a class="btn btn-primary rounded-pill px-4 py-2" href="#">Get Started</a>
         </div>
       </div>
