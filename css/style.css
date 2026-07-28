@@ -5,6 +5,8 @@
             --darker-bg: #0F0F0F;
         }
         
+
+        
         /* navbar */
         .navbar{
           position:absolute;
@@ -87,8 +89,6 @@
 
 
 
-
-
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f8f9fa;
@@ -109,6 +109,8 @@
       background-color: #e55a2b;
       border-color: #e55a2b;
     }
+
+
 
     /* hero */
     .hero-bg {
@@ -170,6 +172,9 @@
       max-width: 500px;
     }
 
+
+
+
     /* Search */
     .search-wrapper {
       display: flex;
@@ -229,6 +234,8 @@
 
 
 
+
+
     /* Benefits */
 
     .hero-benefits span {
@@ -237,6 +244,8 @@
       gap: 8px;
       color: rgba(255, 255, 255, 0.8);
     }
+
+
 
 
     /* Cards */
@@ -290,6 +299,7 @@
       padding-left: 0;
       padding-right: 0;
     }
+
 
 
 
@@ -366,6 +376,10 @@
       color:#777;
       font-weight:500;
     }
+
+
+
+
 
     /* featured */
     .featured-section{
@@ -454,6 +468,10 @@
       font-weight: 600;
       font-size: 12px;
     }
+
+
+
+
 
 
     /*recipe container special recipe bacgroudn colour*/
@@ -617,6 +635,10 @@
     text-decoration: none;
     color: inherit;
     }
+
+
+
+
 
 
 /* contact */
@@ -805,6 +827,10 @@
   font-weight: 700;
 }
 
+
+
+
+
 /* chefs */
 .topchef-section {
     padding: 80px 0;
@@ -833,6 +859,12 @@
     border-color: var(--bs-primary);
     color: #fff;
 }
+
+
+
+
+
+
 
 /*testimonial section*/
 
@@ -921,6 +953,9 @@
 }
 
 
+
+
+
 /* newsletter */
 .newsletter-section{
     margin-top:80px;
@@ -1006,6 +1041,10 @@
     opacity:.7;
 }
 
+
+
+
+
 /* footer */
 .footer{
     background:#111;
@@ -1047,6 +1086,8 @@
     color:#888;
     font-size:12px;
 }
+
+
 
 
 
@@ -1155,6 +1196,9 @@
     border-bottom-left-radius: 10px;
 }
 
+
+
+
 /* Featured chefs */
 
 .featured-chefs {
@@ -1205,6 +1249,9 @@
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     border-color: rgba(255, 107, 53, 0.3);
 }
+
+
+
 
 /* Chef image */
 .chef-image {
@@ -1323,6 +1370,8 @@
     background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
     border-radius: 50%;
 }
+
+
 
 
 /* add recipe section */
