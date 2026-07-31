@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sign In - Mealverse</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+        :root {
+            --brand-color: #ff6b35;
+            --brand-hover: #e85a2a;
+            --bg-light: #fcf9f6;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .vh-100-md {
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('css/images/signin.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-placeholder {
+            height: 40px;
+            width: auto;
+            margin-bottom: 3rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .brand-text {
+            color: var(--brand-color);
+            font-weight: 600;
+        }
+
+        .icon-box {
+            background-color: var(--brand-color);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-right: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-container {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #6c757d;
+            transition: color 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            color: #212529;
+        }
+
+        .btn-outline-brand {
+            color: var(--brand-color);
+            border-color: var(--brand-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-brand:hover {
+            background-color: #fffaf8;
+            border-color: var(--brand-color);
+            color: var(--brand-color);
+        }
+
+        .auth-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            max-width: 480px;
+            width: 100%;
+            margin: auto;
+            border: 1px solid #f0f0f0;
+        }
+
+        .auth-tabs {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 2rem;
+        }
+
+        .auth-tab {
+            flex: 1;
+            text-align: center;
+            padding-bottom: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: #adb5bd;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .auth-tab.active {
+            color: var(--brand-color);
+        }
+
+        .auth-tab.active::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--brand-color);
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .form-control:focus {
+            border-color: var(--brand-color);
+            box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.1);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #adb5bd;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .custom-checkbox {
+            accent-color: var(--brand-color);
+        }
+
+        .btn-brand {
+            background-color: var(--brand-color);
+            border: none;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 0.8rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .btn-brand:hover {
+            background-color: var(--brand-hover);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .divider {
+            position: relative;
+            text-align: center;
+            margin: 1.75rem 0;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #eee;
+            z-index: 1;
+        }
+
+        .divider span {
+            position: relative;
+            background-color: #ffffff;
+            padding: 0 15px;
+            color: #adb5bd;
+            font-size: 0.875rem;
+            z-index: 2;
+        }
+
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid #dee2e6;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 0.6rem;
+            font-weight: 500;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+
+        .btn-social:hover {
+            background-color: #f8f9fa;
+            border-color: #ced4da;
+        }
+
+        .btn-social img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .text-brand-color {
+            color: var(--brand-color) !important;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-section {
+                padding: 2rem;
+            }
+            .auth-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-section {
+                display: none !important;
+            }
+            .auth-container {
+                padding: 1.25rem;
+            }
+            .top-nav {
+                margin-bottom: 1.5rem;
+                gap: 1rem;
+            }
+            .auth-card {
+                padding: 1.5rem;
+                box-shadow: none;
+                border: none;
+                background: transparent;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .auth-tabs {
+                margin-bottom: 1.5rem;
+            }
+            .btn-brand, .btn-social {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid p-0">
+    <div class="row g-0 vh-100-md">
+        
+        <div class="col-md-6 hero-section d-none d-md-flex">
+            <div class="logo-area">
+                <img alt="Mealverse Logo" class="logo-placeholder" src="css/images/logomain.png"/>
+            </div>
+            <div class="my-auto">
+                <h1 class="display-3 fw-bold mb-3">Welcome Back!</h1>
+                <p class="fs-5 mb-5 opacity-75">Sign in to continue your culinary journey with <span class="brand-text">Mealverse.</span></p>
+                <div class="d-flex align-items-center">
+                    <span class="icon-box">
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                    <span class="fw-medium">Discover. Cook. Share.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 auth-container">
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a class="btn btn-outline-brand" href="index.html">Back to Home</a>
+            </nav>
+
+            <div class="d-flex flex-grow-1 align-items-center justify-content-center py-4">
+                <div class="auth-card">
+                    
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" type="button" id="tabSignin">Sign In</button>
+                        <button class="auth-tab" type="button" id="tabSignup">Sign Up</button>
+                    </div>
+                    <p class="text-secondary small mb-4" id="tabSubtitle">Welcome back! Please sign in to your account.</p>
+
+                    <form action="#" method="POST" id="authForm">
+                        <div class="mb-3 d-none" id="nameGroup">
+                            <label class="form-label" for="fullName">Full Name</label>
+                            <input class="form-control" id="fullName" placeholder="Enter your full name" type="text"/>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input class="form-control" id="email" placeholder="Enter your email" required type="email"/>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <div class="position-relative">
+                                <input class="form-control pe-5" id="password" placeholder="Enter your password" required type="password"/>
+                                <button class="password-toggle" id="togglePassword" type="button" aria-label="Toggle password visibility">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4" id="rememberRow">
+                            <div class="form-check mb-0">
+                                <input class="form-check-input custom-checkbox" id="rememberMe" type="checkbox"/>
+                                <label class="form-check-label small text-secondary" for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a class="small fw-medium text-brand-color text-decoration-none" href="#">Forgot password?</a>
+                        </div>
+
+                        <button class="btn btn-brand w-100 mb-2" type="submit" id="submitBtn">
+                            Sign In <i class="fas fa-arrow-right ms-2 small"></i>
+                        </button>
+                    </form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const togglePasswordBtn = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const tabSignin = document.getElementById('tabSignin');
+    const tabSignup = document.getElementById('tabSignup');
+    const nameGroup = document.getElementById('nameGroup');
+    const fullNameInput = document.getElementById('fullName');
+    const rememberRow = document.getElementById('rememberRow');
+    const submitBtn = document.getElementById('submitBtn');
+    const tabSubtitle = document.getElementById('tabSubtitle');
+    const footerPrompt = document.getElementById('footerPrompt');
+    const toggleModeLink = document.getElementById('toggleModeLink');
+
+    togglePasswordBtn.addEventListener('click', function() {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        
+        const icon = this.querySelector('i');
+        icon.classList.toggle('fa-eye', !isPassword);
+        icon.classList.toggle('fa-eye-slash', isPassword);
+    });
+
+    function setAuthMode(mode) {
+        if (mode === 'signup') {
+            tabSignup.classList.add('active');
+            tabSignin.classList.remove('active');
+            nameGroup.classList.remove('d-none');
+            fullNameInput.required = true;
+            rememberRow.classList.add('d-none');
+            tabSubtitle.textContent = 'Create your account to join Mealverse.';
+            submitBtn.innerHTML = 'Sign Up <i class="fas fa-arrow-right ms-2 small"></i>';
+            footerPrompt.innerHTML = 'Already have an account? <a class="text-brand-color fw-bold text-decoration-none" href="#" id="toggleModeLink">Sign in</a>';
+        } else {
+            tabSignin.classList.add('active');
+            tabSignup.classList.remove('active');
+            nameGroup.classList.add('d-none');
+            fullNameInput.required = false;
+            rememberRow.classList.remove('d-none');
+            tabSubtitle.textContent = 'Welcome back! Please sign in to your account.';
+            submitBtn.innerHTML = 'Sign In <i class="fas fa-arrow-right ms-2 small"></i>';
+            footerPrompt.innerHTML = 'Don\'t have an account? <a class="text-brand-color fw-bold text-decoration-none" href="#" id="toggleModeLink">Sign up</a>';
+        }
+
+        document.getElementById('toggleModeLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentIsSignin = tabSignin.classList.contains('active');
+            setAuthMode(currentIsSignin ? 'signup' : 'signin');
+        });
+    }
+
+    tabSignin.addEventListener('click', () => setAuthMode('signin'));
+    tabSignup.addEventListener('click', () => setAuthMode('signup'));
+
+    toggleModeLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        setAuthMode('signup');
+    });
+</script>
+
+</body>
+</html>
