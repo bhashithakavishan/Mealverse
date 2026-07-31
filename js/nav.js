@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="nav-buttons d-none d-lg-flex align-items-center gap-3">
           <a class="text-white" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
           <a class="text-white" href="signin.html">Sign In</a>
-          <a class="btn btn-primary rounded-pill px-4 py-2" href="get-started.html">Get Started</a>
+          <a class="btn btn-primary rounded-pill px-4 py-2" href="signin.html">Get Started</a>
         </div>
       </div>
     </nav>
