@@ -1393,3 +1393,70 @@
 }
 
 
+/*view recipe page*/
+
+.recipe-detail-hero {
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--dark-bg, #1a1a1a);
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 1;
+}
+
+.border-white-20 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.chef-avatar-sm {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.chef-avatar {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.recipe-badge-pill {
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  color: var(--bs-primary, #FF6B35);
+  background-color: rgba(255, 107, 53, 0.05);
+  border-radius: 50px;
+  padding: 6px 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bullet-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--bs-primary, #FF6B35);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* CTA Sidebar Card */
+.recipe-cta-card {
+  background-color: #FFF8F5;
+  border: 1px solid rgba(255, 107, 53, 0.15);
+}
