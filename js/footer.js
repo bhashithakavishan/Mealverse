@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <ul class="footer-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="#">Marketplace</a></li>
-            <li><a href="#">Chefs</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <a href="#" class="btn btn-primary rounded-pill px-4">
+        <a href="signin.html" class="btn btn-primary rounded-pill px-4">
             Get Started
         </a>
 
