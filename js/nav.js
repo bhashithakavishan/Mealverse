@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul class="navbar-nav gap-lg-4">
             <li class="nav-item"><a class="nav-link ${currentPage === 'index.html' ? 'active' : ''}" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link ${currentPage === 'recipes.html' ? 'active' : ''}" href="recipes.html">Recipes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Marketplace</a></li>
+            <li class="nav-item"><a class="nav-link ${currentPage === 'marketplace.html' ? 'active' : ''}" href="marketplace.html">Marketplace</a></li>
             <li class="nav-item"><a class="nav-link ${currentPage === 'chefs.html' ? 'active' : ''}" href="chefs.html">Chefs</a></li>
             <li class="nav-item"><a class="nav-link ${currentPage === 'contact.html' ? 'active' : ''}" href="contact.html">Contact</a></li>
           </ul>
