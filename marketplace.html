@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - MealVerse</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="recipes-hero">
+        <div class="container text-center">
+            <h1 class="hero-title text-white">Culinary <span class="text-primary">Marketplace</span></h1>
+            <p class="hero-subtitle text-white mx-auto">Premium kitchen tools, rare ingredients, and chef-crafted cookbooks for your kitchen.</p>
+            
+            <div class="search-wrapper mx-auto mt-4" style="max-width: 600px;">
+                <input type="text" class="form-control search-input px-4" placeholder="Search for products, tools, ingredients...">
+                <button class="btn btn-primary search-btn rounded-pill px-4">Search <i class="fas fa-search ms-2"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            
+            <!-- Category Filters -->
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 filter-pills">
+                <button class="btn btn-primary rounded-pill px-4 shadow-sm filter-btn active" data-filter="all">All Products</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="tools">Kitchen Tools</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="ingredients">Ingredients</button>
+                <button class="btn btn-light rounded-pill px-4 shadow-sm text-muted fw-bold filter-btn" data-filter="cookbooks">Cookbooks</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4 product-grid">
+                
+                <!-- Product 01: Kitchen Tools -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="tools">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ_hNOYjjMBGiKGC_J9KBIYdiOTPlWP1oFYHDxwew7Nsdu6glbntlWEMg&s=10" alt="Chef Knife">
+                            <span class="recipe-badge" style="background-color: #f44336;">Sale 20%</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Professional Chef's Knife</h3>
+                            <p class="recipe-author mb-2">Kitchen Tools</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$45.00</h4>
+                                <span class="text-muted text-decoration-line-through" style="font-size: 14px;">$55.00</span>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.9 (120 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 02: Ingredients -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="ingredients">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" alt="Olive Oil">
+                            <span class="recipe-badge" style="background-color: #4caf50;">Organic</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Premium Olive Oil (500ml)</h3>
+                            <p class="recipe-author mb-2">Ingredients</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$22.00</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.8 (85 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 03: Ingredients -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="ingredients">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="css/images/marketplace/spices.jpg" alt="Spice Set">
+                            <span class="recipe-badge" style="background-color: #ff9800;">Best Seller</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Gourmet Spice Collection</h3>
+                            <p class="recipe-author mb-2">Ingredients</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$35.00</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 5.0 (204 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 04: Kitchen Tools -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="tools">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="https://cookware.lk/cdn/shop/files/10_1a19e0cb-8e9c-4ebd-a3ec-62e08ece9ead_2048x.jpg?v=1757772044" alt="Cast Iron Skillet">
+                            <span class="recipe-badge" style="background-color: #ff5722;">Top Rated</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Heavy-Duty Cast Iron Skillet</h3>
+                            <p class="recipe-author mb-2">Kitchen Tools</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$49.99</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.9 (450 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 05: Ingredients -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="ingredients">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqM8WwIlPxMzXOYrt3OXSP7A8Ge4Dplnd1MLnHcdSYUDiJiMKpq-GSlaF&s=10" alt="Truffle Oil">
+                            <span class="recipe-badge" style="background-color: #9c27b0;">Premium</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Organic Black Truffle Oil</h3>
+                            <p class="recipe-author mb-2">Ingredients</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$34.50</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.8 (112 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 06: Kitchen Tools -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="tools">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="css/images/marketplace/apron.jpg" alt="Chef Apron">
+                            <span class="recipe-badge" style="background-color: #333333;">Apparel</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Professional Canvas Chef's Apron</h3>
+                            <p class="recipe-author mb-2">Kitchen Tools</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$25.00</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.8 (156 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 07: Kitchen Tools -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="tools">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="https://nanozone.lk/cdn/shop/files/thermopro-tp06b-meat-type-doneness-settings-selection.jpg?v=1766576109&width=1445" alt="Meat Thermometer">
+                            <span class="recipe-badge" style="background-color: #607d8b;">Smart Tech</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Digital Smart Meat Thermometer</h3>
+                            <p class="recipe-author mb-2">Kitchen Tools</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$39.99</h4>
+                                <span class="text-muted text-decoration-line-through" style="font-size: 14px;">$49.99</span>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.7 (215 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 08: Ingredients -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="ingredients">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="https://www.ceylonsupermart.com/cdn/shop/files/2024-06-17T22_3A46_3A14.090Z_800x.jpg?v=1718664489" alt="Ceylon Cinnamon">
+                            <span class="recipe-badge" style="background-color: #fbc02d; color: #000;">Local Pick</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Premium Ceylon Cinnamon Quills</h3>
+                            <p class="recipe-author mb-2">Ingredients</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$18.50</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 5.0 (420 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 09: Kitchen Tools -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="tools">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKaCbH_PRYErndDb3InJ02zvKfZpeYGNXzUzpqqCJrQx5_6N-apGnOrOEd&s=10" alt="Cutting Board">
+                            <span class="recipe-badge" style="background-color: #795548;">Eco-Friendly</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>Organic Bamboo Cutting Board Set</h3>
+                            <p class="recipe-author mb-2">Kitchen Tools</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$28.00</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.9 (310 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10: Cookbooks -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="cookbooks">
+                    <div class="recipe-card h-100 d-flex flex-column">
+                        <div class="recipe-image">
+                            <img src="css/images/marketplace/book.jpg" alt="Cookbook">
+                            <span class="recipe-badge" style="background-color: #1976d2;">Exclusive</span>
+                        </div>
+                        <div class="recipe-info flex-grow-1 d-flex flex-column">
+                            <h3>MealVerse Masterclass Book</h3>
+                            <p class="recipe-author mb-2">Cookbooks</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-auto">
+                                <h4 class="text-primary fw-bold mb-0">$29.99</h4>
+                            </div>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="fas fa-star"></i> 4.7 (340 reviews)</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold"><i class="fa-solid fa-cart-plus me-2"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="d-flex justify-content-center mt-5">
+                <div class="pagination-wrapper">
+                    <button class="btn btn-primary page-btn shadow-sm">1</button>
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+
+    <!-- Search & Filter JS Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productItems = document.querySelectorAll('.product-item');
+            const searchInput = document.querySelector('.search-input');
+            const searchBtn = document.querySelector('.search-btn');
+
+            // 1. Filter Buttons Functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('btn-primary', 'active');
+                        b.classList.add('btn-light', 'text-muted');
+                    });
+                    
+                    btn.classList.remove('btn-light', 'text-muted');
+                    btn.classList.add('btn-primary', 'active');
+
+                    // Search input clear
+                    if(searchInput) searchInput.value = '';
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    productItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 2. Search Functionality
+            function performSearch() {
+                const query = searchInput.value.toLowerCase().trim();
+
+                filterBtns.forEach(b => {
+                    b.classList.remove('btn-primary', 'active');
+                    b.classList.add('btn-light', 'text-muted');
+                });
+                if(filterBtns[0]) {
+                    filterBtns[0].classList.remove('btn-light', 'text-muted');
+                    filterBtns[0].classList.add('btn-primary', 'active');
+                }
+
+                productItems.forEach(item => {
+                    // Product title and category/author
+                    const title = item.querySelector('h3').textContent.toLowerCase();
+                    const categoryText = item.querySelector('.recipe-author').textContent.toLowerCase();
+
+                    // is Search query matching title
+                    if (title.includes(query) || categoryText.includes(query)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            // search when type inputs
+            if (searchInput) {
+                searchInput.addEventListener('keyup', performSearch);
+            }
+
+            // when click search button
+            if (searchBtn) {
+                searchBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    performSearch();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
