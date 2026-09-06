@@ -22,12 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 and exclusive deals delivered to your inbox every Thursday.
             </p>
 
-            <form class="newsletter-form">
+            <form class="newsletter-form" action="newsletter.php" method="post">
 
                 <input
                     type="email"
+                    name="email"
                     class="form-control"
-                    placeholder="Enter your email address">
+                    placeholder="Enter your email address"
+                    required>
 
                 <button class="btn btn-dark">
                     Subscribe
@@ -47,19 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <div class="container footer-content">
 
-        <a href="index.html">
-            <img src="css/images/logowhite.png" class="footer-logo" alt="MealVerse">
+        <a href="index.php">
+            <img src="images/logowhite.png" class="footer-logo" alt="MealVerse">
         </a>
 
         <ul class="footer-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="marketplace.html">Marketplace</a></li>
-            <li><a href="chefs.html">Chefs</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="recipes.php">Recipes</a></li>
+            <li><a href="marketplace.php">Marketplace</a></li>
+            <li><a href="chefs.php">Chefs</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
 
-        <a href="signin.html" class="btn btn-primary rounded-pill px-4">
+        <a href="signin.php" class="btn btn-primary rounded-pill px-4">
             Get Started
         </a>
 
@@ -72,4 +74,16 @@ document.addEventListener('DOMContentLoaded', () => {
 </footer>
 
     `;
+
+    footerPlaceholder.querySelector('.newsletter-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const response = await fetch(event.currentTarget.action, {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: new FormData(event.currentTarget)
+        });
+        const result = await response.json();
+        alert(result.message);
+        if (result.success) event.currentTarget.reset();
+    });
 });

@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=cleanup">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
@@ -64,7 +64,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="chef-card">
                         <div class="chef-image">
-                            <img src="css/images/chef/chef 6.jpg" alt="Chef">
+                            <img src="images/chef/chef 6.jpg" alt="Chef">
                             <span class="verified"><i class="fa-solid fa-check"></i></span>
                         </div>
                         <h5>Tharusha Lakshitha</h5>
@@ -96,7 +96,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="chef-card">
                         <div class="chef-image">
-                            <img src="css/images/chef/chef1.jpg" alt="Chef">
+                            <img src="images/chef/chef1.jpg" alt="Chef">
                             <span class="verified"><i class="fa-solid fa-check"></i></span>
                         </div>
                         <h5>Thimira Nimsara</h5>
@@ -125,7 +125,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="chef-card">
                         <div class="chef-image">
-                            <img src="css/images/chef/chef 2.jpg" alt="Chef">
+                            <img src="images/chef/chef 2.jpg" alt="Chef">
                             <span class="verified"><i class="fa-solid fa-check"></i></span>
                         </div>
                         <h5>Bhashitha Dharmarathna</h5>
@@ -154,7 +154,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="chef-card">
                         <div class="chef-image">
-                            <img src="css/images/chef/chef 4.jpg" alt="Chef">
+                            <img src="images/chef/chef 4.jpg" alt="Chef">
                             <span class="verified"><i class="fa-solid fa-check"></i></span>
                         </div>
                         <h5>Pavithra Wijesooriya</h5>
@@ -183,7 +183,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="chef-card">
                         <div class="chef-image">
-                            <img src="css/images/chef/chef 5.jpg" alt="Chef">
+                            <img src="images/chef/chef 5.jpg" alt="Chef">
                             <span class="verified"><i class="fa-solid fa-check"></i></span>
                         </div>
                         <h5>Chamidu Sandamal</h5>
@@ -212,7 +212,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="chef-card">
                         <div class="chef-image">
-                            <img src="css/images/chef/chef 3.jpg" alt="Chef">
+                            <img src="images/chef/chef 3.jpg" alt="Chef">
                             <span class="verified"><i class="fa-solid fa-check"></i></span>
                         </div>
                         <h5>Isuru Kumara</h5>
@@ -259,7 +259,7 @@
 
     <!-- Bootstrap JS library -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="js/nav.js?v=final"></script>
+    <script src="js/footer.js?v=final"></script>
 </body>
 </html>

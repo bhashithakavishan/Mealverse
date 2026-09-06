@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Add Recipe - MealVerse</title>
+</head>
+
+<body class="page-add-recipe">
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <header class="contact-hero text-center text-white">
+        <div class="container">
+            <p class="section-label mb-2">Share Your Creations</p>
+            <h1 class="fw-bold mb-3">Add New <span class="text-primary">Recipe</span></h1>
+            <p class="mb-0">Turn your favorite dish into inspiration for a global food community.</p>
+        </div>
+    </header>
+
+    <!-- Main Form -->
+    <div class="container py-5 add-recipe-shell">
+        <div class="recipe-form-card p-4 p-md-5">
+            <!-- Form with file upload support -->
+            <form id="recipeForm" action="add_recipe.php" method="POST" enctype="multipart/form-data">
+
+                <!-- 01 Basic Info -->
+                <section class="mb-5">
+                    <div class="section-header pb-3 border-bottom mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="section-number">01</div>
+                            <h2>Basic Information</h2>
+                        </div>
+                        <span class="text-muted small d-none d-sm-block">Tell us about your recipe</span>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="input-icon-group">
+                                <span class="material-symbols-outlined input-icon">restaurant_menu</span>
+                                <input class="form-control custom-input icon-padded" name="title" placeholder="Recipe Title" type="text" required/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-icon-group">
+                                <span class="material-symbols-outlined input-icon">person</span>
+                                <select class="form-select custom-input" name="chef" required>
+                                    <option value="" selected disabled>Select a chef</option>
+                                    <option value="Tharusha Lakshitha">Tharusha Lakshitha</option>
+                                    <option value="Thimira Nimsara">Thimira Nimsara</option>
+                                    <option value="Bhashitha Dharmarathna">Bhashitha Dharmarathna</option>
+                                    <option value="Pavithra Wijesooriya">Pavithra Wijesooriya</option>
+                                    <option value="Chamidu Sandamal">Chamidu Sandamal</option>
+                                    <option value="Isuru Kumara">Isuru Kumara</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold small text-muted text-uppercase mb-2">Cuisine</label>
+                            <select class="form-select custom-input" name="cuisine">
+                                <option value="Sri Lankan" selected>Sri Lankan</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Mexican">Mexican</option>
+                                <option value="Asian">Asian</option>
+                                <option value="French">French</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold small text-muted text-uppercase mb-2">Category</label>
+                            <select class="form-select custom-input" name="category">
+                                <option value="Main Course" selected>Main Course</option>
+                                <option value="Dessert">Dessert</option>
+                                <option value="Appetizer">Appetizer</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Soups">Soups</option>
+                                <option value="Salads">Salads</option>
+                                <option value="Beverages">Beverages</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 02 Image Upload -->
+                <section class="mb-5">
+                    <div class="section-header pb-3 border-bottom mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="section-number">02</div>
+                            <h2>Recipe Image</h2>
+                        </div>
+                        <span class="text-muted small d-none d-sm-block">Add a photo</span>
+                    </div>
+                    <div class="upload-zone text-center p-4">
+                        <div class="stat-icon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 28px;">
+                            <span class="material-symbols-outlined">cloud_upload</span>
+                        </div>
+                        <h5 class="fw-bold mb-2">Upload Recipe Image</h5>
+                        <p class="text-muted mb-2 small">JPG, PNG or WEBP</p>
+                        <input type="file" name="recipe_image" class="form-control custom-input w-50 mx-auto" accept="image/*" required>
+                    </div>
+                </section>
+
+                <!-- 03 Ingredients -->
+                <section class="mb-5">
+                    <div class="section-header pb-3 border-bottom mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="section-number">03</div>
+                            <h2>Ingredients</h2>
+                        </div>
+                        <span class="text-muted small d-none d-sm-block">List what's needed</span>
+                    </div>
+
+                    <div id="ingredientsContainer">
+                        <div class="row g-3 mb-3 align-items-center ingredient-row">
+                            <div class="col-md-8">
+                                <div class="input-icon-group">
+                                    <span class="material-symbols-outlined input-icon">flatware</span>
+                                    <input class="form-control custom-input icon-padded" name="ingredients[]" placeholder="Ingredient name" type="text" required/>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-icon-group">
+                                    <span class="material-symbols-outlined input-icon">scale</span>
+                                    <input class="form-control custom-input icon-padded" name="quantities[]" placeholder="Quantity (e.g. 200g)" type="text"/>
+                                </div>
+                            </div>
+                            <div class="col-md-1 text-end">
+                                <button class="btn text-danger p-2 remove-row-btn" type="button">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="addIngredientBtn" class="btn btn-outline-primary d-inline-flex align-items-center gap-2" type="button">
+                        <span class="material-symbols-outlined fs-6">add</span> Add Ingredient
+                    </button>
+                </section>
+
+                <!-- 04 Instructions -->
+                <section class="mb-5">
+                    <div class="section-header pb-3 border-bottom mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="section-number">04</div>
+                            <h2>Instructions</h2>
+                        </div>
+                        <span class="text-muted small d-none d-sm-block">Share the cooking steps</span>
+                    </div>
+
+                    <div id="stepsContainer">
+                        <div class="instruction-step p-3 mb-3 step-row">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <div class="step-badge step-num">1</div>
+                                </div>
+                                <div class="col">
+                                    <textarea class="form-control custom-input" name="steps[]" placeholder="Describe this step..." rows="2" required></textarea>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn text-danger p-2 remove-step-btn" type="button">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="addStepBtn" class="btn btn-outline-primary d-inline-flex align-items-center gap-2 mt-2" type="button">
+                        <span class="material-symbols-outlined fs-6">add</span> Add Another Step
+                    </button>
+                </section>
+
+                <!-- Action Button -->
+                <div class="text-center pt-3">
+                    <button class="btn btn-primary px-5 py-3 rounded-pill fw-bold shadow" type="submit">
+                        <span class="material-symbols-outlined align-middle me-1">rocket_launch</span> Publish Recipe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/nav.js?v=final"></script>
+    <script src="js/footer.js?v=final"></script>
+
+    <!-- JavaScript for Add/Remove Rows -->
+    <script>
+        // Add new Ingredient Row
+        document.getElementById('addIngredientBtn').addEventListener('click', function() {
+            const container = document.getElementById('ingredientsContainer');
+            const newRow = document.createElement('div');
+            newRow.className = 'row g-3 mb-3 align-items-center ingredient-row';
+            newRow.innerHTML = `
+                <div class="col-md-8">
+                    <div class="input-icon-group">
+                        <span class="material-symbols-outlined input-icon">flatware</span>
+                        <input class="form-control custom-input icon-padded" name="ingredients[]" placeholder="Ingredient name" type="text" required/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-icon-group">
+                        <span class="material-symbols-outlined input-icon">scale</span>
+                        <input class="form-control custom-input icon-padded" name="quantities[]" placeholder="Quantity" type="text"/>
+                    </div>
+                </div>
+                <div class="col-md-1 text-end">
+                    <button class="btn text-danger p-2 remove-row-btn" type="button">
+                        <span class="material-symbols-outlined">delete</span>
+                    </button>
+                </div>
+            `;
+            container.appendChild(newRow);
+        });
+
+        // Add new Step Row
+        document.getElementById('addStepBtn').addEventListener('click', function() {
+            const container = document.getElementById('stepsContainer');
+            const count = container.querySelectorAll('.step-row').length + 1;
+            const newStep = document.createElement('div');
+            newStep.className = 'instruction-step p-3 mb-3 step-row';
+            newStep.innerHTML = `
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <div class="step-badge step-num">${count}</div>
+                    </div>
+                    <div class="col">
+                        <textarea class="form-control custom-input" name="steps[]" placeholder="Describe this step..." rows="2" required></textarea>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn text-danger p-2 remove-step-btn" type="button">
+                            <span class="material-symbols-outlined">delete</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+            container.appendChild(newStep);
+        });
+
+        // Remove row logic
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.remove-row-btn')) {
+                const rows = document.querySelectorAll('.ingredient-row');
+                if (rows.length > 1) {
+                    e.target.closest('.ingredient-row').remove();
+                }
+            }
+            if (e.target.closest('.remove-step-btn')) {
+                const steps = document.querySelectorAll('.step-row');
+                if (steps.length > 1) {
+                    e.target.closest('.step-row').remove();
+                    // Update step numbers
+                    document.querySelectorAll('.step-num').forEach((el, index) => {
+                        el.textContent = index + 1;
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -68,23 +68,23 @@
                     <div class="contact-form-card bg-white p-4 p-md-5 rounded-4 shadow-sm">
                         <h3 class="fw-bold mb-4">Send Us a Message</h3>
 
-                        <form action="#" method="post">
+                        <form id="contact-form" action="process_contact.php" method="post">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold">Your Name</label>
-                                    <input type="text" class="form-control custom-input" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" maxlength="100" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold">Email Address</label>
-                                    <input type="email" class="form-control custom-input" placeholder="Your Email" required>
+                                    <input type="email" name="email" class="form-control custom-input" placeholder="Your Email" maxlength="255" required>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label fw-semibold">Subject</label>
-                                    <input type="text" class="form-control custom-input" placeholder="Recipe inquiry / Support" required>
+                                    <input type="text" name="subject" class="form-control custom-input" placeholder="Recipe inquiry / Support" maxlength="255" required>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label fw-semibold">Message</label>
-                                    <textarea class="form-control custom-input" rows="5" placeholder="Write your message here..." required></textarea>
+                                    <textarea class="form-control custom-input" name="message" rows="5" placeholder="Write your message here..." maxlength="5000" required></textarea>
                                 </div>
                                 <div class="col-12 mt-4">
                                     <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill fw-bold">
@@ -102,7 +102,8 @@
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="js/nav.js?v=final"></script>
+    <script src="js/footer.js?v=final"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

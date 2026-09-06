@@ -25,7 +25,7 @@
                     <input type="text" class="form-control search-input px-4" placeholder="Search recipes, ingredients...">
                     <button class="btn btn-primary search-btn rounded-pill px-4">Search <i class="fas fa-search ms-2"></i></button>
                 </div>
-                <a href="addrecipe.html" class="btn btn-light add-recipe-btn rounded-pill px-4 py-2 fw-bold d-flex align-items-center gap-2">
+                <a href="addrecipe.php" class="btn btn-light add-recipe-btn rounded-pill px-4 py-2 fw-bold d-flex align-items-center gap-2">
                     <i class="fas fa-plus text-dark"></i> Add New Recipe
                 </a>
             </div>
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="recipe-grid-4">
+            <div class="recipe-grid-4" data-recipe-grid>
 
 
 
@@ -73,7 +73,7 @@
                             <span><i class="fas fa-star"></i> 4.9 (1500)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                             <span><i class="fas fa-star"></i> 4.8 (950)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                             <span><i class="fas fa-star"></i> 4.9 (2100)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                             <span><i class="fas fa-star"></i> 4.7 (830)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                             <span><i class="fas fa-star"></i> 4.8 (450)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                             <span><i class="fas fa-star"></i> 4.7 (380)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                             <span><i class="fas fa-star"></i> 4.9 (1200)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -215,7 +215,7 @@
                             <span><i class="fas fa-star"></i> 4.6 (590)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -238,7 +238,7 @@
                             <span><i class="fas fa-star"></i> 4.9 (2400)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                             <span><i class="fas fa-star"></i> 4.8 (1100)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -278,7 +278,7 @@
                             <span><i class="fas fa-star"></i> 5.0 (980)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -298,7 +298,7 @@
                             <span><i class="fas fa-star"></i> 4.7 (650)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -320,7 +320,7 @@
                             <span><i class="fas fa-star"></i> 4.8 (890)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +340,7 @@
                             <span><i class="fas fa-star"></i> 4.9 (1120)</span>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                         </div>
                     </div>
                 </div>
@@ -658,8 +658,9 @@
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="js/nav.js?v=final"></script>
+    <script src="js/footer.js?v=final"></script>
+    <script src="js/recipes.js"></script>
 
     
 
@@ -674,13 +675,13 @@
                 card.style.cursor = 'pointer';
                 card.addEventListener('click', (event) => {
                     if (event.target.closest('.wishlist-btn, .btn')) return;
-                    window.location.href = 'viewrecipe.html';
+                    window.location.href = 'viewrecipe.php';
                 });
             });
 
             document.querySelectorAll('.recipe-grid-4 .btn.btn-primary.btn-sm.rounded-pill.px-3, .recipe-grid-2 .recipe-card .recipe-info').forEach(element => {
                 if (element.tagName === 'A' && element.getAttribute('href') === '#') {
-                    element.setAttribute('href', 'viewrecipe.html');
+                    element.setAttribute('href', 'viewrecipe.php');
                 }
             });
 

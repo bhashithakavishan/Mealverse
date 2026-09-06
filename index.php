@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css?v=cleanup">
         <link rel="stylesheet" href="css/responsive.css">
         
         <title>MealVerse</title>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="featured-card">
-                    <img src="css/images/featured-recipe.jpg" alt="Seafood Linguine" class="card-img-top">
+                    <img src="images/featured-recipe.jpg" alt="Seafood Linguine" class="card-img-top">
                     <div class="card-body">
                         <span class="badge bg-primary mb-2">ITALIAN</span>
                         <h5 class="card-title">Seafood Linguine in White Wine Sauce</h5>
@@ -83,7 +83,7 @@
        <div class="stats-section">
             <div class="stat-card">
                 <div class="stat-icon">
-                    <img src="css/images/statsimg/recibook.png" alt="Chef Hat Icon">
+                    <img src="images/statsimg/recibook.png" alt="Chef Hat Icon">
                 </div>
 
                 <div class="stat-content">
@@ -94,7 +94,7 @@
 
             <div class="stat-card">
                 <div class="stat-icon">
-                    <img src="css/images/statsimg/chef-hat.png" alt="Chef Hat Icon">
+                    <img src="images/statsimg/chef-hat.png" alt="Chef Hat Icon">
                 </div>
 
                 <div class="stat-content">
@@ -106,7 +106,7 @@
 
             <div class="stat-card">
                 <div class="stat-icon">
-                    <img src="css/images/statsimg/star.png" alt="Recipe Book Icon">
+                    <img src="images/statsimg/star.png" alt="Recipe Book Icon">
                 </div>
 
                 <div class="stat-content">
@@ -118,7 +118,7 @@
 
             <div class="stat-card">
                 <div class="stat-icon">
-                    <img src="css/images/statsimg/people.png" alt="Bookmark Icon">
+                    <img src="images/statsimg/people.png" alt="Bookmark Icon">
                 </div>
 
                 <div class="stat-content">
@@ -142,18 +142,18 @@
                         <p class="section-label">EDITOR'S PICKS</p>
                         <h2>Featured Recipes</h2>
                     </div>
-                    <a href="recipes.html" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+                    <a href="recipes.php" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
 
 
                 <!-- recipe cards -->
-                <div class="recipe-grid">
+                <div class="recipe-grid" data-recipe-grid="featured">
                     
                     <div class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/recipe card.jpg" alt="Recipe">
+                            <img src="images/recipe card.jpg" alt="Recipe">
                             <span class="recipe-badge">French</span>
                             <span class="free-badge">FREE</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -167,7 +167,7 @@
                                 <span><i class="fas fa-fire"></i> 520 cal</span>
                                 <span><i class="fas fa-star"></i> 4.9 (1247)</span>
                             </div>
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm">See More</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm">See More</a>
                         </div>
 
                     </div>
@@ -177,7 +177,7 @@
                     <div class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/recipe card.jpg" alt="Recipe">
+                            <img src="images/recipe card.jpg" alt="Recipe">
                             <span class="recipe-badge">French</span>
                             <span class="free-badge">FREE</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -191,7 +191,7 @@
                                 <span><i class="fas fa-fire"></i> 520 cal</span>
                                 <span><i class="fas fa-star"></i> 4.9 (1247)</span>
                             </div>
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm">See More</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm">See More</a>
                         </div>
                         
                     </div>
@@ -201,7 +201,7 @@
                     <div class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/recipe card.jpg" alt="Recipe">
+                            <img src="images/recipe card.jpg" alt="Recipe">
                             <span class="recipe-badge">French</span>
                             <span class="free-badge">FREE</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -215,7 +215,7 @@
                                 <span><i class="fas fa-fire"></i> 520 cal</span>
                                 <span><i class="fas fa-star"></i> 4.9 (1247)</span>
                             </div>
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm">See More</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm">See More</a>
                         </div>
                         
                     </div>
@@ -225,7 +225,7 @@
                     <div class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/recipe card.jpg" alt="Recipe">
+                            <img src="images/recipe card.jpg" alt="Recipe">
                             <span class="recipe-badge">French</span>
                             <span class="free-badge">FREE</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -239,7 +239,7 @@
                                 <span><i class="fas fa-fire"></i> 520 cal</span>
                                 <span><i class="fas fa-star"></i> 4.9 (1247)</span>
                             </div>
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm">See More</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm">See More</a>
                         </div>
                         
                     </div>
@@ -249,7 +249,7 @@
                     <div class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/recipe card.jpg" alt="Recipe">
+                            <img src="images/recipe card.jpg" alt="Recipe">
                             <span class="recipe-badge">French</span>
                             <span class="free-badge">FREE</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -263,7 +263,7 @@
                                 <span><i class="fas fa-fire"></i> 520 cal</span>
                                 <span><i class="fas fa-star"></i> 4.9 (1247)</span>
                             </div>
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm">See More</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm">See More</a>
                         </div>
                         
                     </div>
@@ -273,7 +273,7 @@
                     <div class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/recipe card.jpg" alt="Recipe">
+                            <img src="images/recipe card.jpg" alt="Recipe">
                             <span class="recipe-badge">French</span>
                             <span class="free-badge">FREE</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -287,7 +287,7 @@
                                 <span><i class="fas fa-fire"></i> 520 cal</span>
                                 <span><i class="fas fa-star"></i> 4.9 (1247)</span>
                             </div>
-                            <a href="viewrecipe.html" class="btn btn-primary btn-sm">See More</a>
+                            <a href="viewrecipe.php" class="btn btn-primary btn-sm">See More</a>
                         </div>
                         
                     </div>
@@ -311,7 +311,6 @@
                         <h2>Popular Categories</h2>
                         <p>From Italian classics to Asian fusion - Find your next culinaryinspiration</p>
                     </div>
-                    <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="category-grid">
@@ -319,56 +318,56 @@
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
                         <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <p>6 recipes</p>
                     </div>
 
 
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
-                        <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <h3>Italian</h3>
+                        <p>1 recipe</p>
                     </div>
                     
                     
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
-                        <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <h3>Asian Fusion</h3>
+                        <p>2 recipes</p>
                     </div>
                     
                     
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
-                        <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <h3>Desserts</h3>
+                        <p>1 recipe</p>
                     </div>
                     
                     
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
-                        <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <h3>Soups</h3>
+                        <p>1 recipe</p>
                     </div>
                     
                     
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
-                        <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <h3>Beverages</h3>
+                        <p>1 recipe</p>
                     </div>
                     
                     
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
-                        <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <h3>Healthy</h3>
+                        <p>2 recipes</p>
                     </div>
                     
                     
                     <div class="category-card">
                         <img src="css\images\catogories\cat1.png" alt="Category Icon">
-                        <h3>Sri Lankan</h3>
-                        <p>2,847 recipes</p>
+                        <h3>Quick Meals</h3>
+                        <p>3 recipes</p>
                     </div>
                     
 
@@ -398,12 +397,12 @@
 
 
                 <!-- recipe cards -->
-                <div class="recipe-grid">
+                <div class="recipe-grid" data-recipe-grid="trending">
                     
                     <div href="#"; class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/trending/trending1.jpg" alt="trending recipe">
+                            <img src="images/trending/trending1.jpg" alt="trending recipe">
                             <span class="recipe-badge">Sri Lankan</span>
                             <span class="premium-badge">PREMIUM</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -425,7 +424,7 @@
                     <div href="#"; class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/trending/trending1.jpg" alt="trending recipe">
+                            <img src="images/trending/trending1.jpg" alt="trending recipe">
                             <span class="recipe-badge">Sri Lankan</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                         </div>
@@ -446,7 +445,7 @@
                     <div href="#"; class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/trending/trending1.jpg" alt="trending recipe">
+                            <img src="images/trending/trending1.jpg" alt="trending recipe">
                             <span class="recipe-badge">Sri Lankan</span>
                             <span class="premium-badge">PREMIUM</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -468,7 +467,7 @@
                     <div href="#"; class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/trending/trending1.jpg" alt="trending recipe">
+                            <img src="images/trending/trending1.jpg" alt="trending recipe">
                             <span class="recipe-badge">Sri Lankan</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                         </div>
@@ -489,7 +488,7 @@
                     <div href="#"; class="recipe-card">
 
                         <div class="recipe-image">
-                            <img src="css/images/trending/trending1.jpg" alt="trending recipe">
+                            <img src="images/trending/trending1.jpg" alt="trending recipe">
                             <span class="recipe-badge">Sri Lankan</span>
                             <span class="premium-badge">PREMIUM</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
@@ -511,7 +510,7 @@
                     <div href="#"; class="recipe-card">
                         
                         <div class="recipe-image">
-                            <img src="css/images/trending/trending1.jpg" alt="trending recipe">
+                            <img src="images/trending/trending1.jpg" alt="trending recipe">
                             <span class="recipe-badge">Sri Lankan</span>
                             <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                         </div>
@@ -557,183 +556,12 @@
                 </div>
 
                 <div class="row g-4">
-                    
-                    
-                    
-                    <div class="col-lg-3 col-md-6">
-                        <div class="chef-card">
-                            <div class="chef-image">
-                                <img src="css/images/chef/chef1.jpg" alt="Chef">
-                                <span class="verified">
-                                    <i class="fa-solid fa-check"></i>
-                                </span>
-                            </div>
-
-                            <h5>Thimira Nimsara</h5>
-                            <p class="chef-speciality">
-                                Sri Lankan & Pastry
-                            </p>
-
-                            <div class="chef-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <span>4.8</span>
-                            </div>
-
-                            <div class="chef-stats">
-                                <div>
-                                    <strong>193</strong>
-                                    <small>Recipes</small>
-                                </div>
-
-                                <div>
-                                    <strong>26K</strong>
-                                    <small>Followers</small>
-                                </div>
-                            </div>
-
-                            <button class="btn btn-primary w-100 rounded-pill">
-                                Follow Chef
-                            </button>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-3 col-md-6">
-                        <div class="chef-card">
-
-                            <div class="chef-image">
-                                <img src="css/images/chef/chef1.jpg" alt="Chef">
-                                <span class="verified">
-                                    <i class="fa-solid fa-check"></i>
-                                </span>
-                            </div>
-
-                            <h5>Thimira Nimsara</h5>
-                            <p class="chef-speciality">
-                                Sri Lankan & Pastry
-                            </p>
-
-                            <div class="chef-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <span>4.8</span>
-                            </div>
-
-                            <div class="chef-stats">
-                                <div>
-                                    <strong>193</strong>
-                                    <small>Recipes</small>
-                                </div>
-
-                                <div>
-                                    <strong>26K</strong>
-                                    <small>Followers</small>
-                                </div>
-                            </div>
-
-                            <button class="btn btn-primary w-100 rounded-pill">
-                                Follow Chef
-                            </button>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="chef-card">
-
-                            <div class="chef-image">
-                                <img src="css/images/chef/chef1.jpg" alt="Chef">
-                                <span class="verified">
-                                    <i class="fa-solid fa-check"></i>
-                                </span>
-                            </div>
-
-                            <h5>Thimira Nimsara</h5>
-                            <p class="chef-speciality">
-                                Sri Lankan & Pastry
-                            </p>
-
-                            <div class="chef-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <span>4.8</span>
-                            </div>
-
-                            <div class="chef-stats">
-                                <div>
-                                    <strong>193</strong>
-                                    <small>Recipes</small>
-                                </div>
-
-                                <div>
-                                    <strong>26K</strong>
-                                    <small>Followers</small>
-                                </div>
-                            </div>
-
-                            <button class="btn btn-primary w-100 rounded-pill">
-                                Follow Chef
-                            </button>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="chef-card">
-
-                            <div class="chef-image">
-                                <img src="css/images/chef/chef1.jpg" alt="Chef">
-                                <span class="verified">
-                                    <i class="fa-solid fa-check"></i>
-                                </span>
-                            </div>
-
-                            <h5>Thimira Nimsara</h5>
-                            <p class="chef-speciality">
-                                Sri Lankan & Pastry
-                            </p>
-
-                            <div class="chef-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <span>4.8</span>
-                            </div>
-
-                            <div class="chef-stats">
-                                <div>
-                                    <strong>193</strong>
-                                    <small>Recipes</small>
-                                </div>
-
-                                <div>
-                                    <strong>26K</strong>
-                                    <small>Followers</small>
-                                </div>
-                            </div>
-
-                            <button class="btn btn-primary w-100 rounded-pill">
-                                Follow Chef
-                            </button>
-                        </div>
-                    </div>
-                
-                
-                
+                    <div class="col-lg-3 col-md-6"><div class="chef-card"><div class="chef-image"><img src="images/chef/chef 6.jpg" alt="Tharusha Lakshitha"><span class="verified"><i class="fa-solid fa-check"></i></span></div><h5>Tharusha Lakshitha</h5><p class="chef-speciality">International Cuisine & Fine Dining</p><div class="chef-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>4.8</span></div><div class="chef-stats"><div><strong>193</strong><small>Recipes</small></div><div><strong>26K</strong><small>Followers</small></div></div><button class="btn btn-primary w-100 rounded-pill">Follow Chef</button></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="chef-card"><div class="chef-image"><img src="images/chef/chef1.jpg" alt="Thimira Nimsara"><span class="verified"><i class="fa-solid fa-check"></i></span></div><h5>Thimira Nimsara</h5><p class="chef-speciality">Sri Lankan & Pastry</p><div class="chef-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>4.8</span></div><div class="chef-stats"><div><strong>193</strong><small>Recipes</small></div><div><strong>26K</strong><small>Followers</small></div></div><button class="btn btn-primary w-100 rounded-pill">Follow Chef</button></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="chef-card"><div class="chef-image"><img src="images/chef/chef 2.jpg" alt="Bhashitha Dharmarathna"><span class="verified"><i class="fa-solid fa-check"></i></span></div><h5>Bhashitha Dharmarathna</h5><p class="chef-speciality">Seafood & Traditional Fusion</p><div class="chef-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>4.8</span></div><div class="chef-stats"><div><strong>193</strong><small>Recipes</small></div><div><strong>26K</strong><small>Followers</small></div></div><button class="btn btn-primary w-100 rounded-pill">Follow Chef</button></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="chef-card"><div class="chef-image"><img src="images/chef/chef 4.jpg" alt="Pavithra Wijesooriya"><span class="verified"><i class="fa-solid fa-check"></i></span></div><h5>Pavithra Wijesooriya</h5><p class="chef-speciality">Italian & Continental Dishes</p><div class="chef-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>4.8</span></div><div class="chef-stats"><div><strong>193</strong><small>Recipes</small></div><div><strong>26K</strong><small>Followers</small></div></div><button class="btn btn-primary w-100 rounded-pill">Follow Chef</button></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="chef-card"><div class="chef-image"><img src="images/chef/chef 5.jpg" alt="Chamidu Sandamal"><span class="verified"><i class="fa-solid fa-check"></i></span></div><h5>Chamidu Sandamal</h5><p class="chef-speciality">French Pastries & Custom Cakes</p><div class="chef-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>4.8</span></div><div class="chef-stats"><div><strong>193</strong><small>Recipes</small></div><div><strong>26K</strong><small>Followers</small></div></div><button class="btn btn-primary w-100 rounded-pill">Follow Chef</button></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="chef-card"><div class="chef-image"><img src="images/chef/chef 3.jpg" alt="Isuru Kumara"><span class="verified"><i class="fa-solid fa-check"></i></span></div><h5>Isuru Kumara</h5><p class="chef-speciality">Healthy Organic & Vegan Options</p><div class="chef-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>4.8</span></div><div class="chef-stats"><div><strong>193</strong><small>Recipes</small></div><div><strong>26K</strong><small>Followers</small></div></div><button class="btn btn-primary w-100 rounded-pill">Follow Chef</button></div></div>
                 </div>
             </div>
         </section>
@@ -762,17 +590,13 @@
                             <i class="fa-solid fa-quote-left quote-icon"></i>
 
                             <p class="testimonial-text">
-                                "The cleanest and most organized recipe platform I've used!"
-                                "I love how easy it is to find exactly what I’m craving on Mealverse.
-                                The category filters and search options make browsing seamless, and being able
-                                to follow top chefs directly keeps my meal prep fresh every week. The design is modern,
-                                distraction-free, and super intuitive!" <br
+                                "MealVerse makes weeknight cooking feel simple. I can find a recipe, save the ingredients, and start cooking without hunting through clutter." <br>
                                 <a href="#">See more</a>
                             </p>
 
                             <div class="testimonial-user">
 
-                                <img src="css/images/testimonials/member.jpg" alt="Member">
+                                <i class="fa-solid fa-circle-user testimonial-member-icon" aria-label="Member"></i>
 
                                 <div class="testimonial-info">
                                     <h6>Samantha Badhra</h6>
@@ -802,21 +626,17 @@
                             <i class="fa-solid fa-quote-left quote-icon"></i>
 
                             <p class="testimonial-text">
-                                "The cleanest and most organized recipe platform I've used!"
-                                "I love how easy it is to find exactly what I’m craving on Mealverse.
-                                The category filters and search options make browsing seamless, and being able
-                                to follow top chefs directly keeps my meal prep fresh every week. The design is modern,
-                                distraction-free, and super intuitive!" <br
+                                "The chef recipes feel personal and practical. I tried the coconut chicken curry last weekend and the step-by-step instructions were exactly what I needed." <br>
                                 <a href="#">See more</a>
                             </p>
 
                             <div class="testimonial-user">
 
-                                <img src="css/images/testimonials/member.jpg" alt="Member">
+                                <i class="fa-solid fa-circle-user testimonial-member-icon" aria-label="Member"></i>
 
                                 <div class="testimonial-info">
-                                    <h6>Samantha Badhra</h6>
-                                    <p>Food Vlogger</p>
+                                    <h6>Ravindu Perera</h6>
+                                    <p>Home Cook</p>
                                 </div>
 
                                 <div class="testimonial-rating">
@@ -842,21 +662,17 @@
                             <i class="fa-solid fa-quote-left quote-icon"></i>
 
                             <p class="testimonial-text">
-                                "The cleanest and most organized recipe platform I've used!"
-                                "I love how easy it is to find exactly what I’m craving on Mealverse.
-                                The category filters and search options make browsing seamless, and being able
-                                to follow top chefs directly keeps my meal prep fresh every week. The design is modern,
-                                distraction-free, and super intuitive!" <br
+                                "The marketplace is a great addition. I found useful kitchen tools quickly, added them to my cart, and checkout took less than a minute." <br>
                                 <a href="#">See more</a>
                             </p>
 
                             <div class="testimonial-user">
 
-                                <img src="css/images/testimonials/member.jpg" alt="Member">
+                                <i class="fa-solid fa-circle-user testimonial-member-icon" aria-label="Member"></i>
 
                                 <div class="testimonial-info">
-                                    <h6>Samantha Badhra</h6>
-                                    <p>Food Vlogger</p>
+                                    <h6>Malini Fernando</h6>
+                                    <p>Recipe Enthusiast</p>
                                 </div>
 
                                 <div class="testimonial-rating">
@@ -904,8 +720,9 @@
 
        <!-- Bootstrap JS library-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="js/nav.js?v=final"></script>
+    <script src="js/footer.js?v=final"></script>
+    <script src="js/recipes.js"></script>
     <script>
 
 
@@ -914,13 +731,13 @@
                 card.style.cursor = 'pointer';
                 card.addEventListener('click', (event) => {
                     if (event.target.closest('.wishlist-btn, .btn')) return;
-                    window.location.href = 'viewrecipe.html';
+                    window.location.href = 'viewrecipe.php';
                 });
             });
 
             document.querySelectorAll('.recipe-link').forEach(link => {
                 if (link.getAttribute('href') === '#') {
-                    link.setAttribute('href', 'viewrecipe.html');
+                    link.setAttribute('href', 'viewrecipe.php');
                 }
             });
         });
