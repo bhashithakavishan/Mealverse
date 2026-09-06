@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require __DIR__ . '/includes/db.php';
 
 header('Content-Type: application/json; charset=utf-8');
 

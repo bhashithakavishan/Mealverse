@@ -15,7 +15,7 @@
     <div id="navbar-placeholder"></div>
         <!-- Recipe Detail Hero Section -->
     <header class="recipe-detail-hero text-white position-relative">
-        <img id="recipe-image" alt="Recipe" class="hero-bg-img" src="css/images/recipe card.jpg"/>
+        <img id="recipe-image" alt="Recipe" class="hero-bg-img" src="images/recipe card.jpg"/>
         <div class="hero-overlay"></div>
         <div class="container position-relative z-2 pb-5 pt-5">
             <span id="recipe-category" class="section-label text-uppercase fw-bold mb-2 d-inline-block">Recipe</span>
@@ -172,8 +172,8 @@
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="js/nav.js?v=final"></script>
+    <script src="js/footer.js?v=final"></script>
     <script src="js/recipe-detail.js"></script>
 </body>
 </html>

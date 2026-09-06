@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function renderRecipe(recipe) {
     document.title = `${recipe.title} - MealVerse`;
-    document.getElementById('recipe-image').src = recipe.image || 'css/images/recipe card.jpg';
+    document.getElementById('recipe-image').src = recipe.image || 'images/recipe card.jpg';
     document.getElementById('recipe-image').alt = recipe.title;
     document.getElementById('recipe-category').textContent = recipe.category;
     document.getElementById('recipe-title').textContent = recipe.title;

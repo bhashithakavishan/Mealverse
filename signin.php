@@ -28,7 +28,7 @@
         }
 
         .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('css/images/signin.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/signin.jpg');
             background-size: cover;
             background-position: center;
             color: #ffffff;
@@ -234,7 +234,7 @@
         
         <div class="col-md-6 hero-section d-none d-md-flex">
             <div class="logo-area">
-                <img alt="Mealverse Logo" class="logo-placeholder" src="css/images/logomain.png"/>
+                <img alt="Mealverse Logo" class="logo-placeholder" src="images/logomain.png"/>
             </div>
             <div class="my-auto">
                 <h1 class="display-3 fw-bold mb-3">Welcome Back!</h1>
@@ -250,8 +250,8 @@
 
         <div class="col-md-6 auth-container">
             <nav class="top-nav">
-                <a href="index.html">Home</a>
-                <a class="btn btn-outline-brand" href="index.html">Back to Home</a>
+                <a href="index.php">Home</a>
+                <a class="btn btn-outline-brand" href="index.php">Back to Home</a>
             </nav>
 
             <div class="d-flex flex-grow-1 align-items-center justify-content-center py-4">
@@ -263,7 +263,7 @@
                     </div>
                     <p class="text-secondary small mb-4" id="tabSubtitle">Welcome back! Please sign in to your account.</p>
 
-                    <form action="auth.php" method="POST" id="authForm">
+                    <form action="auth/login.php" method="POST" id="authForm">
                         <input type="hidden" name="action" id="authAction" value="signin"/>
 
                         <div class="mb-3 d-none" id="nameGroup">

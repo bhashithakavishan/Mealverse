@@ -191,8 +191,8 @@
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="js/nav.js?v=final"></script>
+    <script src="js/footer.js?v=final"></script>
 
     <!-- JavaScript for Add/Remove Rows -->
     <script>

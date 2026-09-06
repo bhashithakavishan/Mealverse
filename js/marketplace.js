@@ -10,11 +10,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         setupSearch();
         document.querySelectorAll('[data-add-to-cart]').forEach((button) => {
             button.addEventListener('click', async () => {
-                const body = new URLSearchParams({ action: 'add', item_id: button.dataset.addToCart, quantity: '1' });
-                const result = await fetch('cart_api.php', { method: 'POST', body }).then((res) => res.json());
-                if (result.error) return alert(result.error);
-                button.innerHTML = '<i class="fa-solid fa-check me-2"></i>Added';
-                setTimeout(() => { button.innerHTML = '<i class="fa-solid fa-cart-plus me-2"></i>Add to Cart'; }, 1200);
+                button.disabled = true;
+                try {
+                    const body = new URLSearchParams({ action: 'add', item_id: button.dataset.addToCart, quantity: '1' });
+                    const response = await fetch('cart_api.php', { method: 'POST', body });
+                    const result = await response.json();
+                    if (!response.ok || result.error) throw new Error(result.error || 'Unable to add this item.');
+                    button.innerHTML = '<i class="fa-solid fa-check me-2"></i>Added';
+                    setTimeout(() => { button.disabled = false; button.innerHTML = '<i class="fa-solid fa-cart-plus me-2"></i>Add to Cart'; }, 1200);
+                } catch (error) {
+                    button.disabled = false;
+                    alert(error.message);
+                }
             });
         });
     } catch (error) {

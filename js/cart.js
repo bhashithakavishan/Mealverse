@@ -4,9 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const count = document.getElementById('cart-count');
     const empty = document.getElementById('cart-empty');
     const summary = document.getElementById('cart-summary');
+        const subtotal = document.getElementById('cart-subtotal');
+        const discount = document.getElementById('cart-discount');
+        const tax = document.getElementById('cart-tax');
 
     async function loadCart() {
-        const cart = await fetch('cart_api.php').then((response) => response.json());
+        const response = await fetch('cart_api.php');
+        if (!response.ok) throw new Error('Unable to load cart.');
+        const cart = await response.json();
         list.innerHTML = cart.items.map((item) => `<div class="d-flex align-items-center gap-3 py-3 border-bottom flex-wrap">
             <img src="${item.image}" alt="${item.name}" class="rounded-3" style="width: 90px; height: 90px; object-fit: cover;">
             <div class="flex-grow-1"><h6 class="fw-bold mb-1">${item.name}</h6><p class="text-muted small mb-0">$${Number(item.price).toFixed(2)} each</p></div>
@@ -15,34 +20,44 @@ document.addEventListener('DOMContentLoaded', () => {
             <button class="btn text-danger p-1" data-remove="${item.id}"><i class="far fa-trash-can"></i></button>
         </div>`).join('');
         total.textContent = `$${Number(cart.total).toFixed(2)}`;
+            if (subtotal) subtotal.textContent = `$${Number(cart.total).toFixed(2)}`;
+            if (discount) discount.textContent = '-$0.00';
+            if (tax) tax.textContent = '$0.00';
         count.textContent = `${cart.count} Items`;
         empty.classList.toggle('d-none', cart.items.length > 0);
         summary.classList.toggle('d-none', cart.items.length === 0);
 
         list.querySelectorAll('[data-change]').forEach((button) => button.addEventListener('click', () => changeQuantity(button.dataset.id, Number(button.dataset.change))));
-        list.querySelectorAll('[data-remove]').forEach((button) => button.addEventListener('click', () => updateCart('remove', button.dataset.remove)));
+        list.querySelectorAll('[data-remove]').forEach((button) => button.addEventListener('click', () => updateCart('remove', button.dataset.remove).catch((error) => alert(error.message))));
     }
 
     async function updateCart(action, itemId, quantity) {
         const body = new URLSearchParams({ action, item_id: itemId || '', quantity: String(quantity || 1) });
-        await fetch('cart_api.php', { method: 'POST', body });
-        loadCart();
+        const response = await fetch('cart_api.php', { method: 'POST', body });
+        if (!response.ok) throw new Error('Unable to update cart.');
+        await loadCart();
     }
 
     async function changeQuantity(itemId, delta) {
         const cart = await fetch(`cart_api.php?item_id=${itemId}`).then((response) => response.json());
         const item = cart.items.find((entry) => String(entry.id) === String(itemId));
-        if (item) updateCart('update', itemId, Math.max(1, item.quantity + delta));
+        if (item) await updateCart('update', itemId, Math.max(1, item.quantity + delta));
     }
 
-    document.getElementById('clear-cart')?.addEventListener('click', () => updateCart('clear'));
+    document.getElementById('clear-cart')?.addEventListener('click', () => updateCart('clear').catch((error) => alert(error.message)));
     document.getElementById('checkout-form')?.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const result = await fetch('checkout.php', { method: 'POST', body: new FormData(event.target) }).then((response) => response.json());
+        const result = await fetch('checkout.php', { method: 'POST', body: new FormData(event.target) }).then(async (response) => {
+            const data = await response.json();
+            return response.ok ? data : { error: data.error || 'Checkout failed.' };
+        });
         if (result.error) return alert(result.error);
         alert(`Order #${result.order_id} confirmed. Thank you for shopping with MealVerse!`);
         event.target.reset();
-        loadCart();
+        await loadCart();
     });
-    loadCart();
+    loadCart().catch(() => {
+        empty.textContent = 'The cart could not be loaded. Please refresh the page.';
+        empty.classList.remove('d-none');
+    });
 });

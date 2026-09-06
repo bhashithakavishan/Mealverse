@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function recipeCard(recipe) {
     const category = recipe.category.toLowerCase().replaceAll(' ', '-');
-    const image = recipe.image || 'css/images/recipe card.jpg';
+    const image = recipe.image || 'images/recipe card.jpg';
     return `
         <article class="recipe-card" data-category="${escapeHtml(category)}" data-search="${escapeHtml(`${recipe.title} ${recipe.chef} ${recipe.cuisine} ${recipe.ingredients}`)}">
             <div class="recipe-image">
@@ -47,7 +47,7 @@ function recipeCard(recipe) {
                     <span><i class="fas fa-tag"></i> ${escapeHtml(recipe.category)}</span>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <a href="viewrecipe.html?id=${encodeURIComponent(recipe.id)}" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
+                    <a href="viewrecipe.php?id=${encodeURIComponent(recipe.id)}" class="btn btn-primary btn-sm rounded-pill px-3">View Recipe</a>
                 </div>
             </div>
         </article>`;

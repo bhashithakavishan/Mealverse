@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require __DIR__ . '/includes/db.php';
 header('Content-Type: application/json; charset=utf-8');
 
 $cart = $_SESSION['cart'] ?? [];
@@ -8,7 +8,7 @@ $name = trim($_POST['customer_name'] ?? '');
 $email = trim($_POST['customer_email'] ?? '');
 $address = trim($_POST['shipping_address'] ?? '');
 
-if (!$cart || $name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $address === '') {
+if (!$cart || $name === '' || strlen($name) > 100 || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 255 || $address === '' || strlen($address) > 2000) {
     http_response_code(422);
     echo json_encode(['error' => 'Enter your name, a valid email, and a shipping address.']);
     exit;
