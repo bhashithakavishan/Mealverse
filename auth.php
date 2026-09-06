@@ -6,13 +6,17 @@ session_start();
 include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $action = $_POST['action'];
+    $action = $_POST['action'] ?? '';
 
     // --- SIGN UP LOGIC ---
     if ($action == "signup") {
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = $_POST['password'];
+
+        if ($name === '' || $email === '' || $password === '') {
+            die('Name, email, and password are required.');
+        }
 
         // Check if email already exists
         $checkEmail = "SELECT * FROM users WHERE email = '$email'";

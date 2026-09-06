@@ -10,6 +10,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cuisine = mysqli_real_escape_string($conn, $_POST['cuisine']);
     $category = mysqli_real_escape_string($conn, $_POST['category']);
 
+    $ingredients = "";
+    if (!empty($_POST['ingredients'])) {
+        foreach ($_POST['ingredients'] as $index => $ingredient) {
+            $ingredientName = trim($ingredient);
+            $quantity = trim($_POST['quantities'][$index] ?? '');
+            if ($ingredientName !== '') {
+                $ingredients .= mysqli_real_escape_string($conn, $ingredientName);
+                if ($quantity !== '') {
+                    $ingredients .= " (" . mysqli_real_escape_string($conn, $quantity) . ")";
+                }
+                $ingredients .= "\n";
+            }
+        }
+    }
+
     // 2. Combine steps into one formatted text
     $instructions = "";
     if (!empty($_POST['steps'])) {
@@ -40,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // 4. Save data into database
-    $sql = "INSERT INTO recipes (title, chef, cuisine, category, image, instructions) 
-            VALUES ('$title', '$chef', '$cuisine', '$category', '$imagePath', '$instructions')";
+        $sql = "INSERT INTO recipes (title, chef, cuisine, category, image, ingredients, instructions)
+            VALUES ('$title', '$chef', '$cuisine', '$category', '$imagePath', '$ingredients', '$instructions')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>

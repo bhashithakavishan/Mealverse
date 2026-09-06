@@ -15,21 +15,21 @@
     <div id="navbar-placeholder"></div>
         <!-- Recipe Detail Hero Section -->
     <header class="recipe-detail-hero text-white position-relative">
-        <img alt="Seafood Paella" class="hero-bg-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC23Tjw34J0ez98-YPII3WQt8VAaulNLSmW0hhJLswKkzQiKPw5dsqRXD5gnrt8anWFkQEeSbiF-4uJF_vSX9VRKCx70NCpaJh7DZUSjJNJWxvjNyglZDPmlT5eLXj7-BceqHzkrZJlOKm-IG2WDOi7TvUbsA6t7xy0UG_S8oobM0m1WwqP07ySb7fSUhtL68ex8Qb4dVklJkYCNef454PL-vpomnI6tSZcm8A9W9zKUa2z-DyvYYf_"/>
+        <img id="recipe-image" alt="Recipe" class="hero-bg-img" src="css/images/recipe card.jpg"/>
         <div class="hero-overlay"></div>
         <div class="container position-relative z-2 pb-5 pt-5">
-            <span class="section-label text-uppercase fw-bold mb-2 d-inline-block">Seafood</span>
-            <h1 class="display-4 fw-bold mb-4">Seafood Paella with Saffron</h1>
+            <span id="recipe-category" class="section-label text-uppercase fw-bold mb-2 d-inline-block">Recipe</span>
+            <h1 id="recipe-title" class="display-4 fw-bold mb-4">Loading recipe...</h1>
 
             <!-- Chef Meta -->
             <div class="d-flex align-items-center gap-3 mb-4">
                 <img alt="Chef Thimira" class="chef-avatar-sm rounded-circle border border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATcF2bS3arKiO3pLmzJ5hJJqpNeHgd-7nynZebC0xgSbr6KIUkXVCllPmFgasztJjHSB8g_vNr-w4sELVF7olwWai9avFjtrF5L1CyeGIiD3B0QmBWAerWZhH-HuxUAshDzCXWZTD6pBMUH-ZlT0CiqxCnJcssbqK55ESMJz7bZ0685PNcJyGI5yjI753w8vcKQ3s5Ayd6xMMkYXAm65FnBIyL2hgzH8KFVdU9rsoGk9ylEypj4LZX"/>
                 <div>
                     <p class="mb-0 fw-medium d-flex align-items-center gap-1">
-                        by Chef Thimira Nimsara
+                        <span id="recipe-chef">by Chef</span>
                         <span class="material-symbols-outlined text-info fs-6">verified</span>
                     </p>
-                    <small class="text-white-50">March 20, 2025</small>
+                    <small id="recipe-date" class="text-white-50"></small>
                 </div>
             </div>
 
@@ -51,18 +51,15 @@
             <!-- Left Column: Ingredients & Instructions -->
             <div class="col-lg-8">
                 <p class="lead text-muted mb-4">
-                    A classic Spanish dish packed with seafood, saffron-infused rice, and aromatic spices. Perfect for special occasions!
+                    <span id="recipe-description">Loading recipe details...</span>
                 </p>
 
-                <div class="d-flex gap-2 mb-5 flex-wrap">
-                    <span class="recipe-badge-pill">Main Course</span>
-                    <span class="recipe-badge-pill">Seafood</span>
-                    <span class="recipe-badge-pill">Gluten Free</span>
+                <div id="recipe-badges" class="d-flex gap-2 mb-5 flex-wrap">
                 </div>
 
                 <!-- Ingredients Grid -->
                 <h2 class="fw-bold mb-4">Ingredients</h2>
-                <div class="row g-3 mb-5">
+                <div id="ingredients-list" class="row g-3 mb-5">
                     <div class="col-md-6 d-flex align-items-center gap-2 text-dark"><span class="bullet-dot"></span> 2 cups Bomba rice</div>
                     <div class="col-md-6 d-flex align-items-center gap-2 text-dark"><span class="bullet-dot"></span> 4 cups seafood stock</div>
                     <div class="col-md-6 d-flex align-items-center gap-2 text-dark"><span class="bullet-dot"></span> 500g mixed seafood</div>
@@ -78,7 +75,7 @@
 
                 <!-- Step-by-Step Instructions -->
                 <h2 class="fw-bold mb-4">Instructions</h2>
-                <div class="d-flex flex-column gap-4 mb-5">
+                <div id="instructions-list" class="d-flex flex-column gap-4 mb-5">
                     <div class="d-flex gap-3">
                         <div class="step-badge">1</div>
                         <div>
@@ -152,8 +149,8 @@
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <img alt="Chef Portrait" class="chef-avatar rounded-circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvp0Z1--5rb1OxQLjxGWlYeDgvZRBb8v0YiT7tzQT7OJvalsuiYpPPtusRwdZDjZbRu5e4s7c0w4vLPUudayXXdcvHmoIJiw1NNn9ZxCMejBoGDUBCW53gWsjvdrXAg7hLtvmTtJQ_c3q56nIEVTMOi5hvdiwuQQeInFMQQGCAIF1aO1h5IOW7NOpBpHnhxWiFQi6AvQLMX5ijVnWeD94qawYNzNpuSSHJKfnBT9odAQw-_6b-JOXe"/>
                         <div>
-                            <h6 class="fw-bold mb-0 d-flex align-items-center gap-1">Chef Thimira Nimsara</h6>
-                            <small class="text-muted">12 Recipes</small>
+                            <h6 id="recipe-chef-name" class="fw-bold mb-0 d-flex align-items-center gap-1">Chef</h6>
+                            <small class="text-muted">Recipe creator</small>
                         </div>
                     </div>
                     <button class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2"><span>View Profile</span>
@@ -177,5 +174,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/recipe-detail.js"></script>
 </body>
 </html>
